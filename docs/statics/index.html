@@ -1,0 +1,2854 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Free Source Available Invoicing, Expenses &amp; Time-Tracking | Invoice Ninja</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="referrer" content="always">
+    <link rel="canonical" href="https://invoiceninja.github.io/docs/statics">
+    <meta name="description" content="The leading free source available online invoicing app for freelancers &amp; businesses. Invoice, accept payments, track expenses, &amp; time-tasks">
+
+    <link rel="stylesheet" href="/assets/build/css/main.css?id=6145b5c4aae1ccb9d2f96ae70f781723">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/agate.min.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
+
+    <script>hljs.highlightAll();</script>
+</head>
+
+<nav class="py-4 sticky top-0 z-40 lg:z-50 w-full mx-auto bg-white border-b">
+    <div id="navigation-content" class="flex items-center justify-between px-4 md:px-0 md:mx-4 lg:px-4 xl:mx-auto max-w-8xl">
+        <a href="/" id="left-side-logo">
+            <img class="h-10"
+                 src="/assets/images/logo-rounded.png"
+                 alt="Invoice Ninja logo"/>
+        </a>
+        <section id="right-side-items" class="text-sm">
+            <div class="hidden md:hidden lg:block md:space-x-5">
+                <input type="text" placeholder="Quick search ..." id="topSearchBox" data-lpignore="true"
+                       class="pb-1 border-b hover:border-ninja-blue focus:border-ninja-blue focus:outline-none">
+                <a href="/docs/getting-started" class="py-2 border-b border-transparent hover:border-ninja-blue">User Guide</a>
+                <a href="https://app.swaggerhub.com/apis/invoiceninja/invoiceninja" target="_blank"
+                   class="py-2 border-b border-transparent hover:border-ninja-blue">API Documentation</a>
+                <a target="_blank" href="https://invoicing.co" class="px-5 py-2 border rounded-full hover:border-ninja-blue">Go
+                    to app</a>
+            </div>
+            <div class="flex flex-col lg:hidden">
+                <button id="mobile-menu-toggle" class="focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="feather feather-menu">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </section>
+    </div>
+    <div id="mobile-menu" class="hidden px-4 pt-4 flex flex-col">
+        <a href="/docs/getting-started"
+           class="py-2 border-b border-transparent hover:border-ninja-blue">User Guide</a>
+        <a href="https://app.swaggerhub.com/apis/invoiceninja/invoiceninja" target="_blank"
+           class="py-2 border-b border-transparent hover:border-ninja-blue">API Documentation</a>
+        <a href="https://invoicing.co" target="_blank"
+           class="py-2 border-b border-transparent hover:border-ninja-blue">Go to app</a>
+    </div>
+</nav>
+<body class="font-sans antialiased text-gray-900 bg-white ">
+        <div class="hidden top-0 absolute z-40 bg-white w-full h-screen" id="mobile-menu-overlay">
+       <div class="p-6 flex items-top justify-between">
+           <div>
+                                  <div clasS="mb-8">
+                       <a class="block hover:text-ninja-blue font-semibold uppercase "
+                          href="/docs/developer-guide">Developer guide</a>
+
+                       <div class="mt-2">
+                                                          <a class="block hover:text-ninja-blue py-1 "
+                                  href="/docs/developer-guide">Getting Started</a>
+                                                          <a class="block hover:text-ninja-blue py-1 "
+                                  href="/docs/api/authentication">Auth</a>
+                                                          <a class="block hover:text-ninja-blue py-1 "
+                                  href="/docs/api/clients">Clients</a>
+                                                          <a class="block hover:text-ninja-blue py-1 "
+                                  href="/docs/payment-gateways">Payment Gateways</a>
+                                                          <a class="block hover:text-ninja-blue py-1 text-ninja-blue"
+                                  href="/docs/statics">Static Variables</a>
+                                                          <a class="block hover:text-ninja-blue py-1 "
+                                  href="https://app.swaggerhub.com/apis/invoiceninja/invoiceninja">Swagger Docs</a>
+                                                  </div>
+                   </div>
+                          </div>
+           <div>
+                <button onclick="document.getElementById('mobile-menu-overlay').classList.add('hidden');">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+           </div>
+       </div>
+    </div>
+
+    <div class="max-w-12xl grid grid-cols-12 py-2 px-2 lg:mx-auto">
+        <div class="hidden space-y-6 md:block lg:col-span-2">
+            <div class="hidden lg:block fixed mt-2 h-full overflow-y-auto pb-32 pr-16 pl-4">
+                                    <div clasS="mb-8">
+                        <a class="block hover:text-ninja-blue font-semibold uppercase "
+                           href="/docs/developer-guide">Developer guide</a>
+
+                        <div class="mt-2">
+                                                            <a class="block hover:text-ninja-blue py-1 "
+                                   href="/docs/developer-guide">Getting Started</a>
+                                                            <a class="block hover:text-ninja-blue py-1 "
+                                   href="/docs/api/authentication">Auth</a>
+                                                            <a class="block hover:text-ninja-blue py-1 "
+                                   href="/docs/api/clients">Clients</a>
+                                                            <a class="block hover:text-ninja-blue py-1 "
+                                   href="/docs/payment-gateways">Payment Gateways</a>
+                                                            <a class="block hover:text-ninja-blue py-1 text-ninja-blue"
+                                   href="/docs/statics">Static Variables</a>
+                                                            <a class="block hover:text-ninja-blue py-1 "
+                                   href="https://app.swaggerhub.com/apis/invoiceninja/invoiceninja">Swagger Docs</a>
+                                                    </div>
+                    </div>
+                            </div>
+        </div> <!-- End of sidebar -->
+
+        <div class="col-span-12 md:col-span-8 prose mx-auto max-w-max" id="page-content">
+            <div class="block lg:hidden flex flex-col mb-4 lg:mb-0">
+                <button onclick="document.getElementById('mobile-menu-overlay').classList.remove('hidden');">&#8592; Documentation</button>
+            </div>
+
+            <h1>Static variable reference</h1>
+
+<h2>Payment Types:</h2>
+
+<pre><code>[
+    {
+        "typeID" : 4,
+        "paymentMethod" : "ACH"
+    },
+    {
+       "typeID" : 27,
+       "paymentMethod" : "Alipay" 
+    },
+    {
+        "typeID" : 7,
+        "paymentMethod" : "American Express"
+    },
+    {
+        "typeID" : 1,
+        "paymentMethod" : "Bank Transfer"
+    },
+    {
+        "typeID" : 16,
+        "paymentMethod" : "Carte Blanche"
+    },
+    {
+        "typeID" : 2,
+        "paymentMethod" : "Cash"
+    },
+    {
+        "typeID" : 15,
+        "paymentMethod" : "Check"
+    },
+    {
+        "typeID" : 32,
+        "paymentMethod" : "Credit"
+    },
+    {
+        "typeID" : 12,
+        "paymentMethod" : "Credit Card Other"
+    },
+    {
+        "typeID" : 31,
+        "paymentMethod" : "Cryptocurrency"
+    },
+    {
+        "typeID" : 3,
+        "paymentMethod" : "Debit"
+    },
+    {
+        "typeID" : 9,
+        "paymentMethod" : "Diners Card"
+    },
+    {
+        "typeID" : 8,
+        "paymentMethod" : "Discover Card"
+    },
+    {
+        "typeID" : 10,
+        "paymentMethod" : "EuroCard"
+    },
+    {
+        "typeID" : 30,
+        "paymentMethod" : "GoCardless"
+    },
+    {
+        "typeID" : 14,
+        "paymentMethod" : "Google Wallet"
+    },
+    {
+        "typeID" : 18,
+        "paymentMethod" : "JCB"
+    },
+    {
+        "typeID" : 19,
+        "paymentMethod" : "Laser"
+    },
+    {
+        "typeID" : 20,
+        "paymentMethod" : "Maestro"
+    },
+    {
+        "typeID" : 6,
+        "paymentMethod" : "MasterCard"
+    },
+    {
+        "typeID" : 26,
+        "paymentMethod" : "Money Order"
+    },
+    {
+        "typeID" : 11,
+        "paymentMethod" : "Nova"
+    },
+    {
+        "typeID" : 13,
+        "paymentMethod" : "PayPal"
+    },
+    {
+        "typeID" : 29,
+        "paymentMethod" : "SEPA Direct Debit"
+    },
+    {
+        "typeID" : 28,
+        "paymentMethod" : "Sofort"
+    },
+    {
+        "typeID" : 21,
+        "paymentMethod" : "Solo"
+    },
+    {
+        "typeID" : 24,
+        "paymentMethod" : "Swish"
+    },
+    {
+        "typeID" : 22,
+        "paymentMethod" : "Switch"
+    },
+    {
+        "typeID" : 17,
+        "paymentMethod" : "UnionPay"
+    },
+    {
+        "typeID" : 25,
+        "paymentMethod" : "Venmo"
+    },
+    {
+        "typeID" : 5,
+        "paymentMethod" : "Visa Card"
+    },
+    {
+        "typeID" : 33,
+        "paymentMethod" : "Zelle"
+    },
+    {
+        "typeID" : 23,
+        "paymentMethod" : "iZettle"
+    }
+]
+</code></pre>
+
+<h2>Currencies</h2>
+
+<pre><code>[
+  [
+    "id" =&gt; "1",
+    "name" =&gt; "US Dollar",
+  ],
+  [
+    "id" =&gt; "2",
+    "name" =&gt; "British Pound",
+  ],
+  [
+    "id" =&gt; "3",
+    "name" =&gt; "Euro",
+  ],
+  [
+    "id" =&gt; "4",
+    "name" =&gt; "South African Rand",
+  ],
+  [
+    "id" =&gt; "5",
+    "name" =&gt; "Danish Krone",
+  ],
+  [
+    "id" =&gt; "6",
+    "name" =&gt; "Israeli Shekel",
+  ],
+  [
+    "id" =&gt; "7",
+    "name" =&gt; "Swedish Krona",
+  ],
+  [
+    "id" =&gt; "8",
+    "name" =&gt; "Kenyan Shilling",
+  ],
+  [
+    "id" =&gt; "9",
+    "name" =&gt; "Canadian Dollar",
+  ],
+  [
+    "id" =&gt; "10",
+    "name" =&gt; "Philippine Peso",
+  ],
+  [
+    "id" =&gt; "11",
+    "name" =&gt; "Indian Rupee",
+  ],
+  [
+    "id" =&gt; "12",
+    "name" =&gt; "Australian Dollar",
+  ],
+  [
+    "id" =&gt; "13",
+    "name" =&gt; "Singapore Dollar",
+  ],
+  [
+    "id" =&gt; "14",
+    "name" =&gt; "Norske Kroner",
+  ],
+  [
+    "id" =&gt; "15",
+    "name" =&gt; "New Zealand Dollar",
+  ],
+  [
+    "id" =&gt; "16",
+    "name" =&gt; "Vietnamese Dong",
+  ],
+  [
+    "id" =&gt; "17",
+    "name" =&gt; "Swiss Franc",
+  ],
+  [
+    "id" =&gt; "18",
+    "name" =&gt; "Guatemalan Quetzal",
+  ],
+  [
+    "id" =&gt; "19",
+    "name" =&gt; "Malaysian Ringgit",
+  ],
+  [
+    "id" =&gt; "20",
+    "name" =&gt; "Brazilian Real",
+  ],
+  [
+    "id" =&gt; "21",
+    "name" =&gt; "Thai Baht",
+  ],
+  [
+    "id" =&gt; "22",
+    "name" =&gt; "Nigerian Naira",
+  ],
+  [
+    "id" =&gt; "23",
+    "name" =&gt; "Argentine Peso",
+  ],
+  [
+    "id" =&gt; "24",
+    "name" =&gt; "Bangladeshi Taka",
+  ],
+  [
+    "id" =&gt; "25",
+    "name" =&gt; "United Arab Emirates Dirham",
+  ],
+  [
+    "id" =&gt; "26",
+    "name" =&gt; "Hong Kong Dollar",
+  ],
+  [
+    "id" =&gt; "27",
+    "name" =&gt; "Indonesian Rupiah",
+  ],
+  [
+    "id" =&gt; "28",
+    "name" =&gt; "Mexican Peso",
+  ],
+  [
+    "id" =&gt; "29",
+    "name" =&gt; "Egyptian Pound",
+  ],
+  [
+    "id" =&gt; "30",
+    "name" =&gt; "Colombian Peso",
+  ],
+  [
+    "id" =&gt; "31",
+    "name" =&gt; "West African Franc",
+  ],
+  [
+    "id" =&gt; "32",
+    "name" =&gt; "Chinese Renminbi",
+  ],
+  [
+    "id" =&gt; "33",
+    "name" =&gt; "Rwandan Franc",
+  ],
+  [
+    "id" =&gt; "34",
+    "name" =&gt; "Tanzanian Shilling",
+  ],
+  [
+    "id" =&gt; "35",
+    "name" =&gt; "Netherlands Antillean Guilder",
+  ],
+  [
+    "id" =&gt; "36",
+    "name" =&gt; "Trinidad and Tobago Dollar",
+  ],
+  [
+    "id" =&gt; "37",
+    "name" =&gt; "East Caribbean Dollar",
+  ],
+  [
+    "id" =&gt; "38",
+    "name" =&gt; "Ghanaian Cedi",
+  ],
+  [
+    "id" =&gt; "39",
+    "name" =&gt; "Bulgarian Lev",
+  ],
+  [
+    "id" =&gt; "40",
+    "name" =&gt; "Aruban Florin",
+  ],
+  [
+    "id" =&gt; "41",
+    "name" =&gt; "Turkish Lira",
+  ],
+  [
+    "id" =&gt; "42",
+    "name" =&gt; "Romanian New Leu",
+  ],
+  [
+    "id" =&gt; "43",
+    "name" =&gt; "Croatian Kuna",
+  ],
+  [
+    "id" =&gt; "44",
+    "name" =&gt; "Saudi Riyal",
+  ],
+  [
+    "id" =&gt; "45",
+    "name" =&gt; "Japanese Yen",
+  ],
+  [
+    "id" =&gt; "46",
+    "name" =&gt; "Maldivian Rufiyaa",
+  ],
+  [
+    "id" =&gt; "47",
+    "name" =&gt; "Costa Rican Colón",
+  ],
+  [
+    "id" =&gt; "48",
+    "name" =&gt; "Pakistani Rupee",
+  ],
+  [
+    "id" =&gt; "49",
+    "name" =&gt; "Polish Zloty",
+  ],
+  [
+    "id" =&gt; "50",
+    "name" =&gt; "Sri Lankan Rupee",
+  ],
+  [
+    "id" =&gt; "51",
+    "name" =&gt; "Czech Koruna",
+  ],
+  [
+    "id" =&gt; "52",
+    "name" =&gt; "Uruguayan Peso",
+  ],
+  [
+    "id" =&gt; "53",
+    "name" =&gt; "Namibian Dollar",
+  ],
+  [
+    "id" =&gt; "54",
+    "name" =&gt; "Tunisian Dinar",
+  ],
+  [
+    "id" =&gt; "55",
+    "name" =&gt; "Russian Ruble",
+  ],
+  [
+    "id" =&gt; "56",
+    "name" =&gt; "Mozambican Metical",
+  ],
+  [
+    "id" =&gt; "57",
+    "name" =&gt; "Omani Rial",
+  ],
+  [
+    "id" =&gt; "58",
+    "name" =&gt; "Ukrainian Hryvnia",
+  ],
+  [
+    "id" =&gt; "59",
+    "name" =&gt; "Macanese Pataca",
+  ],
+  [
+    "id" =&gt; "60",
+    "name" =&gt; "Taiwan New Dollar",
+  ],
+  [
+    "id" =&gt; "61",
+    "name" =&gt; "Dominican Peso",
+  ],
+  [
+    "id" =&gt; "62",
+    "name" =&gt; "Chilean Peso",
+  ],
+  [
+    "id" =&gt; "63",
+    "name" =&gt; "Icelandic Króna",
+  ],
+  [
+    "id" =&gt; "64",
+    "name" =&gt; "Papua New Guinean Kina",
+  ],
+  [
+    "id" =&gt; "65",
+    "name" =&gt; "Jordanian Dinar",
+  ],
+  [
+    "id" =&gt; "66",
+    "name" =&gt; "Myanmar Kyat",
+  ],
+  [
+    "id" =&gt; "67",
+    "name" =&gt; "Peruvian Sol",
+  ],
+  [
+    "id" =&gt; "68",
+    "name" =&gt; "Botswana Pula",
+  ],
+  [
+    "id" =&gt; "69",
+    "name" =&gt; "Hungarian Forint",
+  ],
+  [
+    "id" =&gt; "70",
+    "name" =&gt; "Ugandan Shilling",
+  ],
+  [
+    "id" =&gt; "71",
+    "name" =&gt; "Barbadian Dollar",
+  ],
+  [
+    "id" =&gt; "72",
+    "name" =&gt; "Brunei Dollar",
+  ],
+  [
+    "id" =&gt; "73",
+    "name" =&gt; "Georgian Lari",
+  ],
+  [
+    "id" =&gt; "74",
+    "name" =&gt; "Qatari Riyal",
+  ],
+  [
+    "id" =&gt; "75",
+    "name" =&gt; "Honduran Lempira",
+  ],
+  [
+    "id" =&gt; "76",
+    "name" =&gt; "Surinamese Dollar",
+  ],
+  [
+    "id" =&gt; "77",
+    "name" =&gt; "Bahraini Dinar",
+  ],
+  [
+    "id" =&gt; "78",
+    "name" =&gt; "Venezuelan Bolivars",
+  ],
+  [
+    "id" =&gt; "79",
+    "name" =&gt; "South Korean Won",
+  ],
+  [
+    "id" =&gt; "80",
+    "name" =&gt; "Moroccan Dirham",
+  ],
+  [
+    "id" =&gt; "81",
+    "name" =&gt; "Jamaican Dollar",
+  ],
+  [
+    "id" =&gt; "82",
+    "name" =&gt; "Angolan Kwanza",
+  ],
+  [
+    "id" =&gt; "83",
+    "name" =&gt; "Haitian Gourde",
+  ],
+  [
+    "id" =&gt; "84",
+    "name" =&gt; "Zambian Kwacha",
+  ],
+  [
+    "id" =&gt; "85",
+    "name" =&gt; "Nepalese Rupee",
+  ],
+  [
+    "id" =&gt; "86",
+    "name" =&gt; "CFP Franc",
+  ],
+  [
+    "id" =&gt; "87",
+    "name" =&gt; "Mauritian Rupee",
+  ],
+  [
+    "id" =&gt; "88",
+    "name" =&gt; "Cape Verdean Escudo",
+  ],
+  [
+    "id" =&gt; "89",
+    "name" =&gt; "Kuwaiti Dinar",
+  ],
+  [
+    "id" =&gt; "90",
+    "name" =&gt; "Algerian Dinar",
+  ],
+  [
+    "id" =&gt; "91",
+    "name" =&gt; "Macedonian Denar",
+  ],
+  [
+    "id" =&gt; "92",
+    "name" =&gt; "Fijian Dollar",
+  ],
+  [
+    "id" =&gt; "93",
+    "name" =&gt; "Bolivian Boliviano",
+  ],
+  [
+    "id" =&gt; "94",
+    "name" =&gt; "Albanian Lek",
+  ],
+  [
+    "id" =&gt; "95",
+    "name" =&gt; "Serbian Dinar",
+  ],
+  [
+    "id" =&gt; "96",
+    "name" =&gt; "Lebanese Pound",
+  ],
+  [
+    "id" =&gt; "97",
+    "name" =&gt; "Armenian Dram",
+  ],
+  [
+    "id" =&gt; "98",
+    "name" =&gt; "Azerbaijan Manat",
+  ],
+  [
+    "id" =&gt; "99",
+    "name" =&gt; "Bosnia and Herzegovina Convertible Mark",
+  ],
+  [
+    "id" =&gt; "100",
+    "name" =&gt; "Belarusian Ruble",
+  ],
+  [
+    "id" =&gt; "101",
+    "name" =&gt; "Gibraltar Pound",
+  ],
+  [
+    "id" =&gt; "102",
+    "name" =&gt; "Moldovan Leu",
+  ],
+  [
+    "id" =&gt; "103",
+    "name" =&gt; "Kazakhstani Tenge",
+  ],
+  [
+    "id" =&gt; "104",
+    "name" =&gt; "Ethiopian Birr",
+  ],
+]
+</code></pre>
+
+<h2>Languages</h2>
+
+<pre><code>[
+  [
+    "id" =&gt; "1",
+    "name" =&gt; "English - United States",
+  ],
+  [
+    "id" =&gt; "2",
+    "name" =&gt; "Italian",
+  ],
+  [
+    "id" =&gt; "3",
+    "name" =&gt; "German",
+  ],
+  [
+    "id" =&gt; "4",
+    "name" =&gt; "French",
+  ],
+  [
+    "id" =&gt; "5",
+    "name" =&gt; "Portuguese - Brazilian",
+  ],
+  [
+    "id" =&gt; "6",
+    "name" =&gt; "Dutch",
+  ],
+  [
+    "id" =&gt; "7",
+    "name" =&gt; "Spanish",
+  ],
+  [
+    "id" =&gt; "8",
+    "name" =&gt; "Norwegian",
+  ],
+  [
+    "id" =&gt; "9",
+    "name" =&gt; "Danish",
+  ],
+  [
+    "id" =&gt; "10",
+    "name" =&gt; "Japanese",
+  ],
+  [
+    "id" =&gt; "11",
+    "name" =&gt; "Swedish",
+  ],
+  [
+    "id" =&gt; "12",
+    "name" =&gt; "Spanish - Spain",
+  ],
+  [
+    "id" =&gt; "13",
+    "name" =&gt; "French - Canada",
+  ],
+  [
+    "id" =&gt; "14",
+    "name" =&gt; "Lithuanian",
+  ],
+  [
+    "id" =&gt; "15",
+    "name" =&gt; "Polish",
+  ],
+  [
+    "id" =&gt; "16",
+    "name" =&gt; "Czech",
+  ],
+  [
+    "id" =&gt; "17",
+    "name" =&gt; "Croatian",
+  ],
+  [
+    "id" =&gt; "18",
+    "name" =&gt; "Albanian",
+  ],
+  [
+    "id" =&gt; "19",
+    "name" =&gt; "Greek",
+  ],
+  [
+    "id" =&gt; "20",
+    "name" =&gt; "English - United Kingdom",
+  ],
+  [
+    "id" =&gt; "21",
+    "name" =&gt; "Portuguese - Portugal",
+  ],
+  [
+    "id" =&gt; "22",
+    "name" =&gt; "Slovenian",
+  ],
+  [
+    "id" =&gt; "23",
+    "name" =&gt; "Finnish",
+  ],
+  [
+    "id" =&gt; "24",
+    "name" =&gt; "Romanian",
+  ],
+  [
+    "id" =&gt; "25",
+    "name" =&gt; "Turkish - Turkey",
+  ],
+  [
+    "id" =&gt; "26",
+    "name" =&gt; "Thai",
+  ],
+  [
+    "id" =&gt; "27",
+    "name" =&gt; "Macedonian",
+  ],
+  [
+    "id" =&gt; "28",
+    "name" =&gt; "Chinese - Taiwan",
+  ],
+  [
+    "id" =&gt; "29",
+    "name" =&gt; "Russian (Russia)",
+  ],
+  [
+    "id" =&gt; "30",
+    "name" =&gt; "Arabic",
+  ],
+  [
+    "id" =&gt; "31",
+    "name" =&gt; "Persian",
+  ],
+  [
+    "id" =&gt; "32",
+    "name" =&gt; "Latvian",
+  ],
+]
+</code></pre>
+
+<h2>Timezones</h2>
+
+<pre><code>[
+  [
+    "id" =&gt; "1",
+    "name" =&gt; "Pacific/Midway",
+  ],
+  [
+    "id" =&gt; "2",
+    "name" =&gt; "US/Samoa",
+  ],
+  [
+    "id" =&gt; "3",
+    "name" =&gt; "US/Hawaii",
+  ],
+  [
+    "id" =&gt; "4",
+    "name" =&gt; "US/Alaska",
+  ],
+  [
+    "id" =&gt; "5",
+    "name" =&gt; "US/Pacific",
+  ],
+  [
+    "id" =&gt; "6",
+    "name" =&gt; "America/Tijuana",
+  ],
+  [
+    "id" =&gt; "7",
+    "name" =&gt; "US/Arizona",
+  ],
+  [
+    "id" =&gt; "8",
+    "name" =&gt; "US/Mountain",
+  ],
+  [
+    "id" =&gt; "9",
+    "name" =&gt; "America/Chihuahua",
+  ],
+  [
+    "id" =&gt; "10",
+    "name" =&gt; "America/Mazatlan",
+  ],
+  [
+    "id" =&gt; "11",
+    "name" =&gt; "America/Mexico_City",
+  ],
+  [
+    "id" =&gt; "12",
+    "name" =&gt; "America/Monterrey",
+  ],
+  [
+    "id" =&gt; "13",
+    "name" =&gt; "Canada/Saskatchewan",
+  ],
+  [
+    "id" =&gt; "14",
+    "name" =&gt; "US/Central",
+  ],
+  [
+    "id" =&gt; "15",
+    "name" =&gt; "US/Eastern",
+  ],
+  [
+    "id" =&gt; "16",
+    "name" =&gt; "US/East-Indiana",
+  ],
+  [
+    "id" =&gt; "17",
+    "name" =&gt; "America/Bogota",
+  ],
+  [
+    "id" =&gt; "18",
+    "name" =&gt; "America/Lima",
+  ],
+  [
+    "id" =&gt; "19",
+    "name" =&gt; "America/Caracas",
+  ],
+  [
+    "id" =&gt; "20",
+    "name" =&gt; "Canada/Atlantic",
+  ],
+  [
+    "id" =&gt; "21",
+    "name" =&gt; "America/La_Paz",
+  ],
+  [
+    "id" =&gt; "22",
+    "name" =&gt; "America/Santiago",
+  ],
+  [
+    "id" =&gt; "23",
+    "name" =&gt; "Canada/Newfoundland",
+  ],
+  [
+    "id" =&gt; "24",
+    "name" =&gt; "America/Buenos_Aires",
+  ],
+  [
+    "id" =&gt; "25",
+    "name" =&gt; "America/Godthab",
+  ],
+  [
+    "id" =&gt; "26",
+    "name" =&gt; "Atlantic/Stanley",
+  ],
+  [
+    "id" =&gt; "27",
+    "name" =&gt; "Atlantic/Azores",
+  ],
+  [
+    "id" =&gt; "28",
+    "name" =&gt; "Atlantic/Cape_Verde",
+  ],
+  [
+    "id" =&gt; "29",
+    "name" =&gt; "Africa/Casablanca",
+  ],
+  [
+    "id" =&gt; "30",
+    "name" =&gt; "Europe/Dublin",
+  ],
+  [
+    "id" =&gt; "31",
+    "name" =&gt; "Europe/Lisbon",
+  ],
+  [
+    "id" =&gt; "32",
+    "name" =&gt; "Europe/London",
+  ],
+  [
+    "id" =&gt; "33",
+    "name" =&gt; "Africa/Monrovia",
+  ],
+  [
+    "id" =&gt; "34",
+    "name" =&gt; "Europe/Amsterdam",
+  ],
+  [
+    "id" =&gt; "35",
+    "name" =&gt; "Europe/Belgrade",
+  ],
+  [
+    "id" =&gt; "36",
+    "name" =&gt; "Europe/Berlin",
+  ],
+  [
+    "id" =&gt; "37",
+    "name" =&gt; "Europe/Bratislava",
+  ],
+  [
+    "id" =&gt; "38",
+    "name" =&gt; "Europe/Brussels",
+  ],
+  [
+    "id" =&gt; "39",
+    "name" =&gt; "Europe/Budapest",
+  ],
+  [
+    "id" =&gt; "40",
+    "name" =&gt; "Europe/Copenhagen",
+  ],
+  [
+    "id" =&gt; "41",
+    "name" =&gt; "Europe/Ljubljana",
+  ],
+  [
+    "id" =&gt; "42",
+    "name" =&gt; "Europe/Madrid",
+  ],
+  [
+    "id" =&gt; "43",
+    "name" =&gt; "Europe/Paris",
+  ],
+  [
+    "id" =&gt; "44",
+    "name" =&gt; "Europe/Prague",
+  ],
+  [
+    "id" =&gt; "45",
+    "name" =&gt; "Europe/Rome",
+  ],
+  [
+    "id" =&gt; "46",
+    "name" =&gt; "Europe/Sarajevo",
+  ],
+  [
+    "id" =&gt; "47",
+    "name" =&gt; "Europe/Skopje",
+  ],
+  [
+    "id" =&gt; "48",
+    "name" =&gt; "Europe/Stockholm",
+  ],
+  [
+    "id" =&gt; "49",
+    "name" =&gt; "Europe/Vienna",
+  ],
+  [
+    "id" =&gt; "50",
+    "name" =&gt; "Europe/Warsaw",
+  ],
+  [
+    "id" =&gt; "51",
+    "name" =&gt; "Europe/Zagreb",
+  ],
+  [
+    "id" =&gt; "52",
+    "name" =&gt; "Europe/Athens",
+  ],
+  [
+    "id" =&gt; "53",
+    "name" =&gt; "Europe/Bucharest",
+  ],
+  [
+    "id" =&gt; "54",
+    "name" =&gt; "Africa/Cairo",
+  ],
+  [
+    "id" =&gt; "55",
+    "name" =&gt; "Africa/Harare",
+  ],
+  [
+    "id" =&gt; "56",
+    "name" =&gt; "Europe/Helsinki",
+  ],
+  [
+    "id" =&gt; "57",
+    "name" =&gt; "Asia/Jerusalem",
+  ],
+  [
+    "id" =&gt; "58",
+    "name" =&gt; "Europe/Kiev",
+  ],
+  [
+    "id" =&gt; "59",
+    "name" =&gt; "Europe/Minsk",
+  ],
+  [
+    "id" =&gt; "60",
+    "name" =&gt; "Europe/Riga",
+  ],
+  [
+    "id" =&gt; "61",
+    "name" =&gt; "Europe/Sofia",
+  ],
+  [
+    "id" =&gt; "62",
+    "name" =&gt; "Europe/Tallinn",
+  ],
+  [
+    "id" =&gt; "63",
+    "name" =&gt; "Europe/Vilnius",
+  ],
+  [
+    "id" =&gt; "64",
+    "name" =&gt; "Europe/Istanbul",
+  ],
+  [
+    "id" =&gt; "65",
+    "name" =&gt; "Asia/Baghdad",
+  ],
+  [
+    "id" =&gt; "66",
+    "name" =&gt; "Asia/Kuwait",
+  ],
+  [
+    "id" =&gt; "67",
+    "name" =&gt; "Africa/Nairobi",
+  ],
+  [
+    "id" =&gt; "68",
+    "name" =&gt; "Asia/Riyadh",
+  ],
+  [
+    "id" =&gt; "69",
+    "name" =&gt; "Asia/Tehran",
+  ],
+  [
+    "id" =&gt; "70",
+    "name" =&gt; "Europe/Moscow",
+  ],
+  [
+    "id" =&gt; "71",
+    "name" =&gt; "Asia/Baku",
+  ],
+  [
+    "id" =&gt; "72",
+    "name" =&gt; "Europe/Volgograd",
+  ],
+  [
+    "id" =&gt; "73",
+    "name" =&gt; "Asia/Muscat",
+  ],
+  [
+    "id" =&gt; "74",
+    "name" =&gt; "Asia/Tbilisi",
+  ],
+  [
+    "id" =&gt; "75",
+    "name" =&gt; "Asia/Yerevan",
+  ],
+  [
+    "id" =&gt; "76",
+    "name" =&gt; "Asia/Kabul",
+  ],
+  [
+    "id" =&gt; "77",
+    "name" =&gt; "Asia/Karachi",
+  ],
+  [
+    "id" =&gt; "78",
+    "name" =&gt; "Asia/Tashkent",
+  ],
+  [
+    "id" =&gt; "79",
+    "name" =&gt; "Asia/Kolkata",
+  ],
+  [
+    "id" =&gt; "80",
+    "name" =&gt; "Asia/Kathmandu",
+  ],
+  [
+    "id" =&gt; "81",
+    "name" =&gt; "Asia/Yekaterinburg",
+  ],
+  [
+    "id" =&gt; "82",
+    "name" =&gt; "Asia/Almaty",
+  ],
+  [
+    "id" =&gt; "83",
+    "name" =&gt; "Asia/Dhaka",
+  ],
+  [
+    "id" =&gt; "84",
+    "name" =&gt; "Asia/Novosibirsk",
+  ],
+  [
+    "id" =&gt; "85",
+    "name" =&gt; "Asia/Bangkok",
+  ],
+  [
+    "id" =&gt; "86",
+    "name" =&gt; "Asia/Ho_Chi_Minh",
+  ],
+  [
+    "id" =&gt; "87",
+    "name" =&gt; "Asia/Jakarta",
+  ],
+  [
+    "id" =&gt; "88",
+    "name" =&gt; "Asia/Krasnoyarsk",
+  ],
+  [
+    "id" =&gt; "89",
+    "name" =&gt; "Asia/Chongqing",
+  ],
+  [
+    "id" =&gt; "90",
+    "name" =&gt; "Asia/Hong_Kong",
+  ],
+  [
+    "id" =&gt; "91",
+    "name" =&gt; "Asia/Kuala_Lumpur",
+  ],
+  [
+    "id" =&gt; "92",
+    "name" =&gt; "Australia/Perth",
+  ],
+  [
+    "id" =&gt; "93",
+    "name" =&gt; "Asia/Singapore",
+  ],
+  [
+    "id" =&gt; "94",
+    "name" =&gt; "Asia/Taipei",
+  ],
+  [
+    "id" =&gt; "95",
+    "name" =&gt; "Asia/Ulaanbaatar",
+  ],
+  [
+    "id" =&gt; "96",
+    "name" =&gt; "Asia/Urumqi",
+  ],
+  [
+    "id" =&gt; "97",
+    "name" =&gt; "Asia/Irkutsk",
+  ],
+  [
+    "id" =&gt; "98",
+    "name" =&gt; "Asia/Seoul",
+  ],
+  [
+    "id" =&gt; "99",
+    "name" =&gt; "Asia/Tokyo",
+  ],
+  [
+    "id" =&gt; "100",
+    "name" =&gt; "Australia/Adelaide",
+  ],
+  [
+    "id" =&gt; "101",
+    "name" =&gt; "Australia/Darwin",
+  ],
+  [
+    "id" =&gt; "102",
+    "name" =&gt; "Asia/Yakutsk",
+  ],
+  [
+    "id" =&gt; "103",
+    "name" =&gt; "Australia/Brisbane",
+  ],
+  [
+    "id" =&gt; "104",
+    "name" =&gt; "Australia/Canberra",
+  ],
+  [
+    "id" =&gt; "105",
+    "name" =&gt; "Pacific/Guam",
+  ],
+  [
+    "id" =&gt; "106",
+    "name" =&gt; "Australia/Hobart",
+  ],
+  [
+    "id" =&gt; "107",
+    "name" =&gt; "Australia/Melbourne",
+  ],
+  [
+    "id" =&gt; "108",
+    "name" =&gt; "Pacific/Port_Moresby",
+  ],
+  [
+    "id" =&gt; "109",
+    "name" =&gt; "Australia/Sydney",
+  ],
+  [
+    "id" =&gt; "110",
+    "name" =&gt; "Asia/Vladivostok",
+  ],
+  [
+    "id" =&gt; "111",
+    "name" =&gt; "Asia/Magadan",
+  ],
+  [
+    "id" =&gt; "112",
+    "name" =&gt; "Pacific/Auckland",
+  ],
+  [
+    "id" =&gt; "113",
+    "name" =&gt; "Pacific/Fiji",
+  ],
+]
+</code></pre>
+
+<h2>Countries</h2>
+
+<pre><code>[
+  [
+    "id" =&gt; "4",
+    "name" =&gt; "Afghanistan",
+    "iso_3166_2" =&gt; "AF",
+    "iso_3166_3" =&gt; "AFG",
+  ],
+  [
+    "id" =&gt; "8",
+    "name" =&gt; "Albania",
+    "iso_3166_2" =&gt; "AL",
+    "iso_3166_3" =&gt; "ALB",
+  ],
+  [
+    "id" =&gt; "10",
+    "name" =&gt; "Antarctica",
+    "iso_3166_2" =&gt; "AQ",
+    "iso_3166_3" =&gt; "ATA",
+  ],
+  [
+    "id" =&gt; "12",
+    "name" =&gt; "Algeria",
+    "iso_3166_2" =&gt; "DZ",
+    "iso_3166_3" =&gt; "DZA",
+  ],
+  [
+    "id" =&gt; "16",
+    "name" =&gt; "American Samoa",
+    "iso_3166_2" =&gt; "AS",
+    "iso_3166_3" =&gt; "ASM",
+  ],
+  [
+    "id" =&gt; "20",
+    "name" =&gt; "Andorra",
+    "iso_3166_2" =&gt; "AD",
+    "iso_3166_3" =&gt; "AND",
+  ],
+  [
+    "id" =&gt; "24",
+    "name" =&gt; "Angola",
+    "iso_3166_2" =&gt; "AO",
+    "iso_3166_3" =&gt; "AGO",
+  ],
+  [
+    "id" =&gt; "28",
+    "name" =&gt; "Antigua and Barbuda",
+    "iso_3166_2" =&gt; "AG",
+    "iso_3166_3" =&gt; "ATG",
+  ],
+  [
+    "id" =&gt; "31",
+    "name" =&gt; "Azerbaijan",
+    "iso_3166_2" =&gt; "AZ",
+    "iso_3166_3" =&gt; "AZE",
+  ],
+  [
+    "id" =&gt; "32",
+    "name" =&gt; "Argentina",
+    "iso_3166_2" =&gt; "AR",
+    "iso_3166_3" =&gt; "ARG",
+  ],
+  [
+    "id" =&gt; "36",
+    "name" =&gt; "Australia",
+    "iso_3166_2" =&gt; "AU",
+    "iso_3166_3" =&gt; "AUS",
+  ],
+  [
+    "id" =&gt; "40",
+    "name" =&gt; "Austria",
+    "iso_3166_2" =&gt; "AT",
+    "iso_3166_3" =&gt; "AUT",
+  ],
+  [
+    "id" =&gt; "44",
+    "name" =&gt; "Bahamas",
+    "iso_3166_2" =&gt; "BS",
+    "iso_3166_3" =&gt; "BHS",
+  ],
+  [
+    "id" =&gt; "48",
+    "name" =&gt; "Bahrain",
+    "iso_3166_2" =&gt; "BH",
+    "iso_3166_3" =&gt; "BHR",
+  ],
+  [
+    "id" =&gt; "50",
+    "name" =&gt; "Bangladesh",
+    "iso_3166_2" =&gt; "BD",
+    "iso_3166_3" =&gt; "BGD",
+  ],
+  [
+    "id" =&gt; "51",
+    "name" =&gt; "Armenia",
+    "iso_3166_2" =&gt; "AM",
+    "iso_3166_3" =&gt; "ARM",
+  ],
+  [
+    "id" =&gt; "52",
+    "name" =&gt; "Barbados",
+    "iso_3166_2" =&gt; "BB",
+    "iso_3166_3" =&gt; "BRB",
+  ],
+  [
+    "id" =&gt; "56",
+    "name" =&gt; "Belgium",
+    "iso_3166_2" =&gt; "BE",
+    "iso_3166_3" =&gt; "BEL",
+  ],
+  [
+    "id" =&gt; "60",
+    "name" =&gt; "Bermuda",
+    "iso_3166_2" =&gt; "BM",
+    "iso_3166_3" =&gt; "BMU",
+  ],
+  [
+    "id" =&gt; "64",
+    "name" =&gt; "Bhutan",
+    "iso_3166_2" =&gt; "BT",
+    "iso_3166_3" =&gt; "BTN",
+  ],
+  [
+    "id" =&gt; "68",
+    "name" =&gt; "Bolivia, Plurinational State of",
+    "iso_3166_2" =&gt; "BO",
+    "iso_3166_3" =&gt; "BOL",
+  ],
+  [
+    "id" =&gt; "70",
+    "name" =&gt; "Bosnia and Herzegovina",
+    "iso_3166_2" =&gt; "BA",
+    "iso_3166_3" =&gt; "BIH",
+  ],
+  [
+    "id" =&gt; "72",
+    "name" =&gt; "Botswana",
+    "iso_3166_2" =&gt; "BW",
+    "iso_3166_3" =&gt; "BWA",
+  ],
+  [
+    "id" =&gt; "74",
+    "name" =&gt; "Bouvet Island",
+    "iso_3166_2" =&gt; "BV",
+    "iso_3166_3" =&gt; "BVT",
+  ],
+  [
+    "id" =&gt; "76",
+    "name" =&gt; "Brazil",
+    "iso_3166_2" =&gt; "BR",
+    "iso_3166_3" =&gt; "BRA",
+  ],
+  [
+    "id" =&gt; "84",
+    "name" =&gt; "Belize",
+    "iso_3166_2" =&gt; "BZ",
+    "iso_3166_3" =&gt; "BLZ",
+  ],
+  [
+    "id" =&gt; "86",
+    "name" =&gt; "British Indian Ocean Territory",
+    "iso_3166_2" =&gt; "IO",
+    "iso_3166_3" =&gt; "IOT",
+  ],
+  [
+    "id" =&gt; "90",
+    "name" =&gt; "Solomon Islands",
+    "iso_3166_2" =&gt; "SB",
+    "iso_3166_3" =&gt; "SLB",
+  ],
+  [
+    "id" =&gt; "92",
+    "name" =&gt; "Virgin Islands, British",
+    "iso_3166_2" =&gt; "VG",
+    "iso_3166_3" =&gt; "VGB",
+  ],
+  [
+    "id" =&gt; "96",
+    "name" =&gt; "Brunei Darussalam",
+    "iso_3166_2" =&gt; "BN",
+    "iso_3166_3" =&gt; "BRN",
+  ],
+  [
+    "id" =&gt; "100",
+    "name" =&gt; "Bulgaria",
+    "iso_3166_2" =&gt; "BG",
+    "iso_3166_3" =&gt; "BGR",
+  ],
+  [
+    "id" =&gt; "104",
+    "name" =&gt; "Myanmar",
+    "iso_3166_2" =&gt; "MM",
+    "iso_3166_3" =&gt; "MMR",
+  ],
+  [
+    "id" =&gt; "108",
+    "name" =&gt; "Burundi",
+    "iso_3166_2" =&gt; "BI",
+    "iso_3166_3" =&gt; "BDI",
+  ],
+  [
+    "id" =&gt; "112",
+    "name" =&gt; "Belarus",
+    "iso_3166_2" =&gt; "BY",
+    "iso_3166_3" =&gt; "BLR",
+  ],
+  [
+    "id" =&gt; "116",
+    "name" =&gt; "Cambodia",
+    "iso_3166_2" =&gt; "KH",
+    "iso_3166_3" =&gt; "KHM",
+  ],
+  [
+    "id" =&gt; "120",
+    "name" =&gt; "Cameroon",
+    "iso_3166_2" =&gt; "CM",
+    "iso_3166_3" =&gt; "CMR",
+  ],
+  [
+    "id" =&gt; "124",
+    "name" =&gt; "Canada",
+    "iso_3166_2" =&gt; "CA",
+    "iso_3166_3" =&gt; "CAN",
+  ],
+  [
+    "id" =&gt; "132",
+    "name" =&gt; "Cape Verde",
+    "iso_3166_2" =&gt; "CV",
+    "iso_3166_3" =&gt; "CPV",
+  ],
+  [
+    "id" =&gt; "136",
+    "name" =&gt; "Cayman Islands",
+    "iso_3166_2" =&gt; "KY",
+    "iso_3166_3" =&gt; "CYM",
+  ],
+  [
+    "id" =&gt; "140",
+    "name" =&gt; "Central African Republic",
+    "iso_3166_2" =&gt; "CF",
+    "iso_3166_3" =&gt; "CAF",
+  ],
+  [
+    "id" =&gt; "144",
+    "name" =&gt; "Sri Lanka",
+    "iso_3166_2" =&gt; "LK",
+    "iso_3166_3" =&gt; "LKA",
+  ],
+  [
+    "id" =&gt; "148",
+    "name" =&gt; "Chad",
+    "iso_3166_2" =&gt; "TD",
+    "iso_3166_3" =&gt; "TCD",
+  ],
+  [
+    "id" =&gt; "152",
+    "name" =&gt; "Chile",
+    "iso_3166_2" =&gt; "CL",
+    "iso_3166_3" =&gt; "CHL",
+  ],
+  [
+    "id" =&gt; "156",
+    "name" =&gt; "China",
+    "iso_3166_2" =&gt; "CN",
+    "iso_3166_3" =&gt; "CHN",
+  ],
+  [
+    "id" =&gt; "158",
+    "name" =&gt; "Taiwan, Province of China",
+    "iso_3166_2" =&gt; "TW",
+    "iso_3166_3" =&gt; "TWN",
+  ],
+  [
+    "id" =&gt; "162",
+    "name" =&gt; "Christmas Island",
+    "iso_3166_2" =&gt; "CX",
+    "iso_3166_3" =&gt; "CXR",
+  ],
+  [
+    "id" =&gt; "166",
+    "name" =&gt; "Cocos (Keeling) Islands",
+    "iso_3166_2" =&gt; "CC",
+    "iso_3166_3" =&gt; "CCK",
+  ],
+  [
+    "id" =&gt; "170",
+    "name" =&gt; "Colombia",
+    "iso_3166_2" =&gt; "CO",
+    "iso_3166_3" =&gt; "COL",
+  ],
+  [
+    "id" =&gt; "174",
+    "name" =&gt; "Comoros",
+    "iso_3166_2" =&gt; "KM",
+    "iso_3166_3" =&gt; "COM",
+  ],
+  [
+    "id" =&gt; "175",
+    "name" =&gt; "Mayotte",
+    "iso_3166_2" =&gt; "YT",
+    "iso_3166_3" =&gt; "MYT",
+  ],
+  [
+    "id" =&gt; "178",
+    "name" =&gt; "Congo",
+    "iso_3166_2" =&gt; "CG",
+    "iso_3166_3" =&gt; "COG",
+  ],
+  [
+    "id" =&gt; "180",
+    "name" =&gt; "Congo, the Democratic Republic of the",
+    "iso_3166_2" =&gt; "CD",
+    "iso_3166_3" =&gt; "COD",
+  ],
+  [
+    "id" =&gt; "184",
+    "name" =&gt; "Cook Islands",
+    "iso_3166_2" =&gt; "CK",
+    "iso_3166_3" =&gt; "COK",
+  ],
+  [
+    "id" =&gt; "188",
+    "name" =&gt; "Costa Rica",
+    "iso_3166_2" =&gt; "CR",
+    "iso_3166_3" =&gt; "CRI",
+  ],
+  [
+    "id" =&gt; "191",
+    "name" =&gt; "Croatia",
+    "iso_3166_2" =&gt; "HR",
+    "iso_3166_3" =&gt; "HRV",
+  ],
+  [
+    "id" =&gt; "192",
+    "name" =&gt; "Cuba",
+    "iso_3166_2" =&gt; "CU",
+    "iso_3166_3" =&gt; "CUB",
+  ],
+  [
+    "id" =&gt; "196",
+    "name" =&gt; "Cyprus",
+    "iso_3166_2" =&gt; "CY",
+    "iso_3166_3" =&gt; "CYP",
+  ],
+  [
+    "id" =&gt; "203",
+    "name" =&gt; "Czech Republic",
+    "iso_3166_2" =&gt; "CZ",
+    "iso_3166_3" =&gt; "CZE",
+  ],
+  [
+    "id" =&gt; "204",
+    "name" =&gt; "Benin",
+    "iso_3166_2" =&gt; "BJ",
+    "iso_3166_3" =&gt; "BEN",
+  ],
+  [
+    "id" =&gt; "208",
+    "name" =&gt; "Denmark",
+    "iso_3166_2" =&gt; "DK",
+    "iso_3166_3" =&gt; "DNK",
+  ],
+  [
+    "id" =&gt; "212",
+    "name" =&gt; "Dominica",
+    "iso_3166_2" =&gt; "DM",
+    "iso_3166_3" =&gt; "DMA",
+  ],
+  [
+    "id" =&gt; "214",
+    "name" =&gt; "Dominican Republic",
+    "iso_3166_2" =&gt; "DO",
+    "iso_3166_3" =&gt; "DOM",
+  ],
+  [
+    "id" =&gt; "218",
+    "name" =&gt; "Ecuador",
+    "iso_3166_2" =&gt; "EC",
+    "iso_3166_3" =&gt; "ECU",
+  ],
+  [
+    "id" =&gt; "222",
+    "name" =&gt; "El Salvador",
+    "iso_3166_2" =&gt; "SV",
+    "iso_3166_3" =&gt; "SLV",
+  ],
+  [
+    "id" =&gt; "226",
+    "name" =&gt; "Equatorial Guinea",
+    "iso_3166_2" =&gt; "GQ",
+    "iso_3166_3" =&gt; "GNQ",
+  ],
+  [
+    "id" =&gt; "231",
+    "name" =&gt; "Ethiopia",
+    "iso_3166_2" =&gt; "ET",
+    "iso_3166_3" =&gt; "ETH",
+  ],
+  [
+    "id" =&gt; "232",
+    "name" =&gt; "Eritrea",
+    "iso_3166_2" =&gt; "ER",
+    "iso_3166_3" =&gt; "ERI",
+  ],
+  [
+    "id" =&gt; "233",
+    "name" =&gt; "Estonia",
+    "iso_3166_2" =&gt; "EE",
+    "iso_3166_3" =&gt; "EST",
+  ],
+  [
+    "id" =&gt; "234",
+    "name" =&gt; "Faroe Islands",
+    "iso_3166_2" =&gt; "FO",
+    "iso_3166_3" =&gt; "FRO",
+  ],
+  [
+    "id" =&gt; "238",
+    "name" =&gt; "Falkland Islands (Malvinas)",
+    "iso_3166_2" =&gt; "FK",
+    "iso_3166_3" =&gt; "FLK",
+  ],
+  [
+    "id" =&gt; "239",
+    "name" =&gt; "South Georgia and the South Sandwich Islands",
+    "iso_3166_2" =&gt; "GS",
+    "iso_3166_3" =&gt; "SGS",
+  ],
+  [
+    "id" =&gt; "242",
+    "name" =&gt; "Fiji",
+    "iso_3166_2" =&gt; "FJ",
+    "iso_3166_3" =&gt; "FJI",
+  ],
+  [
+    "id" =&gt; "246",
+    "name" =&gt; "Finland",
+    "iso_3166_2" =&gt; "FI",
+    "iso_3166_3" =&gt; "FIN",
+  ],
+  [
+    "id" =&gt; "248",
+    "name" =&gt; "Åland Islands",
+    "iso_3166_2" =&gt; "AX",
+    "iso_3166_3" =&gt; "ALA",
+  ],
+  [
+    "id" =&gt; "250",
+    "name" =&gt; "France",
+    "iso_3166_2" =&gt; "FR",
+    "iso_3166_3" =&gt; "FRA",
+  ],
+  [
+    "id" =&gt; "254",
+    "name" =&gt; "French Guiana",
+    "iso_3166_2" =&gt; "GF",
+    "iso_3166_3" =&gt; "GUF",
+  ],
+  [
+    "id" =&gt; "258",
+    "name" =&gt; "French Polynesia",
+    "iso_3166_2" =&gt; "PF",
+    "iso_3166_3" =&gt; "PYF",
+  ],
+  [
+    "id" =&gt; "260",
+    "name" =&gt; "French Southern Territories",
+    "iso_3166_2" =&gt; "TF",
+    "iso_3166_3" =&gt; "ATF",
+  ],
+  [
+    "id" =&gt; "262",
+    "name" =&gt; "Djibouti",
+    "iso_3166_2" =&gt; "DJ",
+    "iso_3166_3" =&gt; "DJI",
+  ],
+  [
+    "id" =&gt; "266",
+    "name" =&gt; "Gabon",
+    "iso_3166_2" =&gt; "GA",
+    "iso_3166_3" =&gt; "GAB",
+  ],
+  [
+    "id" =&gt; "268",
+    "name" =&gt; "Georgia",
+    "iso_3166_2" =&gt; "GE",
+    "iso_3166_3" =&gt; "GEO",
+  ],
+  [
+    "id" =&gt; "270",
+    "name" =&gt; "Gambia",
+    "iso_3166_2" =&gt; "GM",
+    "iso_3166_3" =&gt; "GMB",
+  ],
+  [
+    "id" =&gt; "275",
+    "name" =&gt; "Palestine",
+    "iso_3166_2" =&gt; "PS",
+    "iso_3166_3" =&gt; "PSE",
+  ],
+  [
+    "id" =&gt; "276",
+    "name" =&gt; "Germany",
+    "iso_3166_2" =&gt; "DE",
+    "iso_3166_3" =&gt; "DEU",
+  ],
+  [
+    "id" =&gt; "288",
+    "name" =&gt; "Ghana",
+    "iso_3166_2" =&gt; "GH",
+    "iso_3166_3" =&gt; "GHA",
+  ],
+  [
+    "id" =&gt; "292",
+    "name" =&gt; "Gibraltar",
+    "iso_3166_2" =&gt; "GI",
+    "iso_3166_3" =&gt; "GIB",
+  ],
+  [
+    "id" =&gt; "296",
+    "name" =&gt; "Kiribati",
+    "iso_3166_2" =&gt; "KI",
+    "iso_3166_3" =&gt; "KIR",
+  ],
+  [
+    "id" =&gt; "300",
+    "name" =&gt; "Greece",
+    "iso_3166_2" =&gt; "GR",
+    "iso_3166_3" =&gt; "GRC",
+  ],
+  [
+    "id" =&gt; "304",
+    "name" =&gt; "Greenland",
+    "iso_3166_2" =&gt; "GL",
+    "iso_3166_3" =&gt; "GRL",
+  ],
+  [
+    "id" =&gt; "308",
+    "name" =&gt; "Grenada",
+    "iso_3166_2" =&gt; "GD",
+    "iso_3166_3" =&gt; "GRD",
+  ],
+  [
+    "id" =&gt; "312",
+    "name" =&gt; "Guadeloupe",
+    "iso_3166_2" =&gt; "GP",
+    "iso_3166_3" =&gt; "GLP",
+  ],
+  [
+    "id" =&gt; "316",
+    "name" =&gt; "Guam",
+    "iso_3166_2" =&gt; "GU",
+    "iso_3166_3" =&gt; "GUM",
+  ],
+  [
+    "id" =&gt; "320",
+    "name" =&gt; "Guatemala",
+    "iso_3166_2" =&gt; "GT",
+    "iso_3166_3" =&gt; "GTM",
+  ],
+  [
+    "id" =&gt; "324",
+    "name" =&gt; "Guinea",
+    "iso_3166_2" =&gt; "GN",
+    "iso_3166_3" =&gt; "GIN",
+  ],
+  [
+    "id" =&gt; "328",
+    "name" =&gt; "Guyana",
+    "iso_3166_2" =&gt; "GY",
+    "iso_3166_3" =&gt; "GUY",
+  ],
+  [
+    "id" =&gt; "332",
+    "name" =&gt; "Haiti",
+    "iso_3166_2" =&gt; "HT",
+    "iso_3166_3" =&gt; "HTI",
+  ],
+  [
+    "id" =&gt; "334",
+    "name" =&gt; "Heard Island and McDonald Islands",
+    "iso_3166_2" =&gt; "HM",
+    "iso_3166_3" =&gt; "HMD",
+  ],
+  [
+    "id" =&gt; "336",
+    "name" =&gt; "Holy See (Vatican City State)",
+    "iso_3166_2" =&gt; "VA",
+    "iso_3166_3" =&gt; "VAT",
+  ],
+  [
+    "id" =&gt; "340",
+    "name" =&gt; "Honduras",
+    "iso_3166_2" =&gt; "HN",
+    "iso_3166_3" =&gt; "HND",
+  ],
+  [
+    "id" =&gt; "344",
+    "name" =&gt; "Hong Kong",
+    "iso_3166_2" =&gt; "HK",
+    "iso_3166_3" =&gt; "HKG",
+  ],
+  [
+    "id" =&gt; "348",
+    "name" =&gt; "Hungary",
+    "iso_3166_2" =&gt; "HU",
+    "iso_3166_3" =&gt; "HUN",
+  ],
+  [
+    "id" =&gt; "352",
+    "name" =&gt; "Iceland",
+    "iso_3166_2" =&gt; "IS",
+    "iso_3166_3" =&gt; "ISL",
+  ],
+  [
+    "id" =&gt; "356",
+    "name" =&gt; "India",
+    "iso_3166_2" =&gt; "IN",
+    "iso_3166_3" =&gt; "IND",
+  ],
+  [
+    "id" =&gt; "360",
+    "name" =&gt; "Indonesia",
+    "iso_3166_2" =&gt; "ID",
+    "iso_3166_3" =&gt; "IDN",
+  ],
+  [
+    "id" =&gt; "364",
+    "name" =&gt; "Iran, Islamic Republic of",
+    "iso_3166_2" =&gt; "IR",
+    "iso_3166_3" =&gt; "IRN",
+  ],
+  [
+    "id" =&gt; "368",
+    "name" =&gt; "Iraq",
+    "iso_3166_2" =&gt; "IQ",
+    "iso_3166_3" =&gt; "IRQ",
+  ],
+  [
+    "id" =&gt; "372",
+    "name" =&gt; "Ireland",
+    "iso_3166_2" =&gt; "IE",
+    "iso_3166_3" =&gt; "IRL",
+  ],
+  [
+    "id" =&gt; "376",
+    "name" =&gt; "Israel",
+    "iso_3166_2" =&gt; "IL",
+    "iso_3166_3" =&gt; "ISR",
+  ],
+  [
+    "id" =&gt; "380",
+    "name" =&gt; "Italy",
+    "iso_3166_2" =&gt; "IT",
+    "iso_3166_3" =&gt; "ITA",
+  ],
+  [
+    "id" =&gt; "384",
+    "name" =&gt; "Côte d'Ivoire",
+    "iso_3166_2" =&gt; "CI",
+    "iso_3166_3" =&gt; "CIV",
+  ],
+  [
+    "id" =&gt; "388",
+    "name" =&gt; "Jamaica",
+    "iso_3166_2" =&gt; "JM",
+    "iso_3166_3" =&gt; "JAM",
+  ],
+  [
+    "id" =&gt; "392",
+    "name" =&gt; "Japan",
+    "iso_3166_2" =&gt; "JP",
+    "iso_3166_3" =&gt; "JPN",
+  ],
+  [
+    "id" =&gt; "398",
+    "name" =&gt; "Kazakhstan",
+    "iso_3166_2" =&gt; "KZ",
+    "iso_3166_3" =&gt; "KAZ",
+  ],
+  [
+    "id" =&gt; "400",
+    "name" =&gt; "Jordan",
+    "iso_3166_2" =&gt; "JO",
+    "iso_3166_3" =&gt; "JOR",
+  ],
+  [
+    "id" =&gt; "404",
+    "name" =&gt; "Kenya",
+    "iso_3166_2" =&gt; "KE",
+    "iso_3166_3" =&gt; "KEN",
+  ],
+  [
+    "id" =&gt; "408",
+    "name" =&gt; "Korea, Democratic People's Republic of",
+    "iso_3166_2" =&gt; "KP",
+    "iso_3166_3" =&gt; "PRK",
+  ],
+  [
+    "id" =&gt; "410",
+    "name" =&gt; "Korea, Republic of",
+    "iso_3166_2" =&gt; "KR",
+    "iso_3166_3" =&gt; "KOR",
+  ],
+  [
+    "id" =&gt; "414",
+    "name" =&gt; "Kuwait",
+    "iso_3166_2" =&gt; "KW",
+    "iso_3166_3" =&gt; "KWT",
+  ],
+  [
+    "id" =&gt; "417",
+    "name" =&gt; "Kyrgyzstan",
+    "iso_3166_2" =&gt; "KG",
+    "iso_3166_3" =&gt; "KGZ",
+  ],
+  [
+    "id" =&gt; "418",
+    "name" =&gt; "Lao People's Democratic Republic",
+    "iso_3166_2" =&gt; "LA",
+    "iso_3166_3" =&gt; "LAO",
+  ],
+  [
+    "id" =&gt; "422",
+    "name" =&gt; "Lebanon",
+    "iso_3166_2" =&gt; "LB",
+    "iso_3166_3" =&gt; "LBN",
+  ],
+  [
+    "id" =&gt; "426",
+    "name" =&gt; "Lesotho",
+    "iso_3166_2" =&gt; "LS",
+    "iso_3166_3" =&gt; "LSO",
+  ],
+  [
+    "id" =&gt; "428",
+    "name" =&gt; "Latvia",
+    "iso_3166_2" =&gt; "LV",
+    "iso_3166_3" =&gt; "LVA",
+  ],
+  [
+    "id" =&gt; "430",
+    "name" =&gt; "Liberia",
+    "iso_3166_2" =&gt; "LR",
+    "iso_3166_3" =&gt; "LBR",
+  ],
+  [
+    "id" =&gt; "434",
+    "name" =&gt; "Libya",
+    "iso_3166_2" =&gt; "LY",
+    "iso_3166_3" =&gt; "LBY",
+  ],
+  [
+    "id" =&gt; "438",
+    "name" =&gt; "Liechtenstein",
+    "iso_3166_2" =&gt; "LI",
+    "iso_3166_3" =&gt; "LIE",
+  ],
+  [
+    "id" =&gt; "440",
+    "name" =&gt; "Lithuania",
+    "iso_3166_2" =&gt; "LT",
+    "iso_3166_3" =&gt; "LTU",
+  ],
+  [
+    "id" =&gt; "442",
+    "name" =&gt; "Luxembourg",
+    "iso_3166_2" =&gt; "LU",
+    "iso_3166_3" =&gt; "LUX",
+  ],
+  [
+    "id" =&gt; "446",
+    "name" =&gt; "Macao",
+    "iso_3166_2" =&gt; "MO",
+    "iso_3166_3" =&gt; "MAC",
+  ],
+  [
+    "id" =&gt; "450",
+    "name" =&gt; "Madagascar",
+    "iso_3166_2" =&gt; "MG",
+    "iso_3166_3" =&gt; "MDG",
+  ],
+  [
+    "id" =&gt; "454",
+    "name" =&gt; "Malawi",
+    "iso_3166_2" =&gt; "MW",
+    "iso_3166_3" =&gt; "MWI",
+  ],
+  [
+    "id" =&gt; "458",
+    "name" =&gt; "Malaysia",
+    "iso_3166_2" =&gt; "MY",
+    "iso_3166_3" =&gt; "MYS",
+  ],
+  [
+    "id" =&gt; "462",
+    "name" =&gt; "Maldives",
+    "iso_3166_2" =&gt; "MV",
+    "iso_3166_3" =&gt; "MDV",
+  ],
+  [
+    "id" =&gt; "466",
+    "name" =&gt; "Mali",
+    "iso_3166_2" =&gt; "ML",
+    "iso_3166_3" =&gt; "MLI",
+  ],
+  [
+    "id" =&gt; "470",
+    "name" =&gt; "Malta",
+    "iso_3166_2" =&gt; "MT",
+    "iso_3166_3" =&gt; "MLT",
+  ],
+  [
+    "id" =&gt; "474",
+    "name" =&gt; "Martinique",
+    "iso_3166_2" =&gt; "MQ",
+    "iso_3166_3" =&gt; "MTQ",
+  ],
+  [
+    "id" =&gt; "478",
+    "name" =&gt; "Mauritania",
+    "iso_3166_2" =&gt; "MR",
+    "iso_3166_3" =&gt; "MRT",
+  ],
+  [
+    "id" =&gt; "480",
+    "name" =&gt; "Mauritius",
+    "iso_3166_2" =&gt; "MU",
+    "iso_3166_3" =&gt; "MUS",
+  ],
+  [
+    "id" =&gt; "484",
+    "name" =&gt; "Mexico",
+    "iso_3166_2" =&gt; "MX",
+    "iso_3166_3" =&gt; "MEX",
+  ],
+  [
+    "id" =&gt; "492",
+    "name" =&gt; "Monaco",
+    "iso_3166_2" =&gt; "MC",
+    "iso_3166_3" =&gt; "MCO",
+  ],
+  [
+    "id" =&gt; "496",
+    "name" =&gt; "Mongolia",
+    "iso_3166_2" =&gt; "MN",
+    "iso_3166_3" =&gt; "MNG",
+  ],
+  [
+    "id" =&gt; "498",
+    "name" =&gt; "Moldova, Republic of",
+    "iso_3166_2" =&gt; "MD",
+    "iso_3166_3" =&gt; "MDA",
+  ],
+  [
+    "id" =&gt; "499",
+    "name" =&gt; "Montenegro",
+    "iso_3166_2" =&gt; "ME",
+    "iso_3166_3" =&gt; "MNE",
+  ],
+  [
+    "id" =&gt; "500",
+    "name" =&gt; "Montserrat",
+    "iso_3166_2" =&gt; "MS",
+    "iso_3166_3" =&gt; "MSR",
+  ],
+  [
+    "id" =&gt; "504",
+    "name" =&gt; "Morocco",
+    "iso_3166_2" =&gt; "MA",
+    "iso_3166_3" =&gt; "MAR",
+  ],
+  [
+    "id" =&gt; "508",
+    "name" =&gt; "Mozambique",
+    "iso_3166_2" =&gt; "MZ",
+    "iso_3166_3" =&gt; "MOZ",
+  ],
+  [
+    "id" =&gt; "512",
+    "name" =&gt; "Oman",
+    "iso_3166_2" =&gt; "OM",
+    "iso_3166_3" =&gt; "OMN",
+  ],
+  [
+    "id" =&gt; "516",
+    "name" =&gt; "Namibia",
+    "iso_3166_2" =&gt; "NA",
+    "iso_3166_3" =&gt; "NAM",
+  ],
+  [
+    "id" =&gt; "520",
+    "name" =&gt; "Nauru",
+    "iso_3166_2" =&gt; "NR",
+    "iso_3166_3" =&gt; "NRU",
+  ],
+  [
+    "id" =&gt; "524",
+    "name" =&gt; "Nepal",
+    "iso_3166_2" =&gt; "NP",
+    "iso_3166_3" =&gt; "NPL",
+  ],
+  [
+    "id" =&gt; "528",
+    "name" =&gt; "Netherlands",
+    "iso_3166_2" =&gt; "NL",
+    "iso_3166_3" =&gt; "NLD",
+  ],
+  [
+    "id" =&gt; "531",
+    "name" =&gt; "Curaçao",
+    "iso_3166_2" =&gt; "CW",
+    "iso_3166_3" =&gt; "CUW",
+  ],
+  [
+    "id" =&gt; "533",
+    "name" =&gt; "Aruba",
+    "iso_3166_2" =&gt; "AW",
+    "iso_3166_3" =&gt; "ABW",
+  ],
+  [
+    "id" =&gt; "534",
+    "name" =&gt; "Sint Maarten (Dutch part)",
+    "iso_3166_2" =&gt; "SX",
+    "iso_3166_3" =&gt; "SXM",
+  ],
+  [
+    "id" =&gt; "535",
+    "name" =&gt; "Bonaire, Sint Eustatius and Saba",
+    "iso_3166_2" =&gt; "BQ",
+    "iso_3166_3" =&gt; "BES",
+  ],
+  [
+    "id" =&gt; "540",
+    "name" =&gt; "New Caledonia",
+    "iso_3166_2" =&gt; "NC",
+    "iso_3166_3" =&gt; "NCL",
+  ],
+  [
+    "id" =&gt; "548",
+    "name" =&gt; "Vanuatu",
+    "iso_3166_2" =&gt; "VU",
+    "iso_3166_3" =&gt; "VUT",
+  ],
+  [
+    "id" =&gt; "554",
+    "name" =&gt; "New Zealand",
+    "iso_3166_2" =&gt; "NZ",
+    "iso_3166_3" =&gt; "NZL",
+  ],
+  [
+    "id" =&gt; "558",
+    "name" =&gt; "Nicaragua",
+    "iso_3166_2" =&gt; "NI",
+    "iso_3166_3" =&gt; "NIC",
+  ],
+  [
+    "id" =&gt; "562",
+    "name" =&gt; "Niger",
+    "iso_3166_2" =&gt; "NE",
+    "iso_3166_3" =&gt; "NER",
+  ],
+  [
+    "id" =&gt; "566",
+    "name" =&gt; "Nigeria",
+    "iso_3166_2" =&gt; "NG",
+    "iso_3166_3" =&gt; "NGA",
+  ],
+  [
+    "id" =&gt; "570",
+    "name" =&gt; "Niue",
+    "iso_3166_2" =&gt; "NU",
+    "iso_3166_3" =&gt; "NIU",
+  ],
+  [
+    "id" =&gt; "574",
+    "name" =&gt; "Norfolk Island",
+    "iso_3166_2" =&gt; "NF",
+    "iso_3166_3" =&gt; "NFK",
+  ],
+  [
+    "id" =&gt; "578",
+    "name" =&gt; "Norway",
+    "iso_3166_2" =&gt; "NO",
+    "iso_3166_3" =&gt; "NOR",
+  ],
+  [
+    "id" =&gt; "580",
+    "name" =&gt; "Northern Mariana Islands",
+    "iso_3166_2" =&gt; "MP",
+    "iso_3166_3" =&gt; "MNP",
+  ],
+  [
+    "id" =&gt; "581",
+    "name" =&gt; "United States Minor Outlying Islands",
+    "iso_3166_2" =&gt; "UM",
+    "iso_3166_3" =&gt; "UMI",
+  ],
+  [
+    "id" =&gt; "583",
+    "name" =&gt; "Micronesia, Federated States of",
+    "iso_3166_2" =&gt; "FM",
+    "iso_3166_3" =&gt; "FSM",
+  ],
+  [
+    "id" =&gt; "584",
+    "name" =&gt; "Marshall Islands",
+    "iso_3166_2" =&gt; "MH",
+    "iso_3166_3" =&gt; "MHL",
+  ],
+  [
+    "id" =&gt; "585",
+    "name" =&gt; "Palau",
+    "iso_3166_2" =&gt; "PW",
+    "iso_3166_3" =&gt; "PLW",
+  ],
+  [
+    "id" =&gt; "586",
+    "name" =&gt; "Pakistan",
+    "iso_3166_2" =&gt; "PK",
+    "iso_3166_3" =&gt; "PAK",
+  ],
+  [
+    "id" =&gt; "591",
+    "name" =&gt; "Panama",
+    "iso_3166_2" =&gt; "PA",
+    "iso_3166_3" =&gt; "PAN",
+  ],
+  [
+    "id" =&gt; "598",
+    "name" =&gt; "Papua New Guinea",
+    "iso_3166_2" =&gt; "PG",
+    "iso_3166_3" =&gt; "PNG",
+  ],
+  [
+    "id" =&gt; "600",
+    "name" =&gt; "Paraguay",
+    "iso_3166_2" =&gt; "PY",
+    "iso_3166_3" =&gt; "PRY",
+  ],
+  [
+    "id" =&gt; "604",
+    "name" =&gt; "Peru",
+    "iso_3166_2" =&gt; "PE",
+    "iso_3166_3" =&gt; "PER",
+  ],
+  [
+    "id" =&gt; "608",
+    "name" =&gt; "Philippines",
+    "iso_3166_2" =&gt; "PH",
+    "iso_3166_3" =&gt; "PHL",
+  ],
+  [
+    "id" =&gt; "612",
+    "name" =&gt; "Pitcairn",
+    "iso_3166_2" =&gt; "PN",
+    "iso_3166_3" =&gt; "PCN",
+  ],
+  [
+    "id" =&gt; "616",
+    "name" =&gt; "Poland",
+    "iso_3166_2" =&gt; "PL",
+    "iso_3166_3" =&gt; "POL",
+  ],
+  [
+    "id" =&gt; "620",
+    "name" =&gt; "Portugal",
+    "iso_3166_2" =&gt; "PT",
+    "iso_3166_3" =&gt; "PRT",
+  ],
+  [
+    "id" =&gt; "624",
+    "name" =&gt; "Guinea-Bissau",
+    "iso_3166_2" =&gt; "GW",
+    "iso_3166_3" =&gt; "GNB",
+  ],
+  [
+    "id" =&gt; "626",
+    "name" =&gt; "Timor-Leste",
+    "iso_3166_2" =&gt; "TL",
+    "iso_3166_3" =&gt; "TLS",
+  ],
+  [
+    "id" =&gt; "630",
+    "name" =&gt; "Puerto Rico",
+    "iso_3166_2" =&gt; "PR",
+    "iso_3166_3" =&gt; "PRI",
+  ],
+  [
+    "id" =&gt; "634",
+    "name" =&gt; "Qatar",
+    "iso_3166_2" =&gt; "QA",
+    "iso_3166_3" =&gt; "QAT",
+  ],
+  [
+    "id" =&gt; "638",
+    "name" =&gt; "Réunion",
+    "iso_3166_2" =&gt; "RE",
+    "iso_3166_3" =&gt; "REU",
+  ],
+  [
+    "id" =&gt; "642",
+    "name" =&gt; "Romania",
+    "iso_3166_2" =&gt; "RO",
+    "iso_3166_3" =&gt; "ROU",
+  ],
+  [
+    "id" =&gt; "643",
+    "name" =&gt; "Russian Federation",
+    "iso_3166_2" =&gt; "RU",
+    "iso_3166_3" =&gt; "RUS",
+  ],
+  [
+    "id" =&gt; "646",
+    "name" =&gt; "Rwanda",
+    "iso_3166_2" =&gt; "RW",
+    "iso_3166_3" =&gt; "RWA",
+  ],
+  [
+    "id" =&gt; "652",
+    "name" =&gt; "Saint Barthélemy",
+    "iso_3166_2" =&gt; "BL",
+    "iso_3166_3" =&gt; "BLM",
+  ],
+  [
+    "id" =&gt; "654",
+    "name" =&gt; "Saint Helena, Ascension and Tristan da Cunha",
+    "iso_3166_2" =&gt; "SH",
+    "iso_3166_3" =&gt; "SHN",
+  ],
+  [
+    "id" =&gt; "659",
+    "name" =&gt; "Saint Kitts and Nevis",
+    "iso_3166_2" =&gt; "KN",
+    "iso_3166_3" =&gt; "KNA",
+  ],
+  [
+    "id" =&gt; "660",
+    "name" =&gt; "Anguilla",
+    "iso_3166_2" =&gt; "AI",
+    "iso_3166_3" =&gt; "AIA",
+  ],
+  [
+    "id" =&gt; "662",
+    "name" =&gt; "Saint Lucia",
+    "iso_3166_2" =&gt; "LC",
+    "iso_3166_3" =&gt; "LCA",
+  ],
+  [
+    "id" =&gt; "663",
+    "name" =&gt; "Saint Martin (French part)",
+    "iso_3166_2" =&gt; "MF",
+    "iso_3166_3" =&gt; "MAF",
+  ],
+  [
+    "id" =&gt; "666",
+    "name" =&gt; "Saint Pierre and Miquelon",
+    "iso_3166_2" =&gt; "PM",
+    "iso_3166_3" =&gt; "SPM",
+  ],
+  [
+    "id" =&gt; "670",
+    "name" =&gt; "Saint Vincent and the Grenadines",
+    "iso_3166_2" =&gt; "VC",
+    "iso_3166_3" =&gt; "VCT",
+  ],
+  [
+    "id" =&gt; "674",
+    "name" =&gt; "San Marino",
+    "iso_3166_2" =&gt; "SM",
+    "iso_3166_3" =&gt; "SMR",
+  ],
+  [
+    "id" =&gt; "678",
+    "name" =&gt; "Sao Tome and Principe",
+    "iso_3166_2" =&gt; "ST",
+    "iso_3166_3" =&gt; "STP",
+  ],
+  [
+    "id" =&gt; "682",
+    "name" =&gt; "Saudi Arabia",
+    "iso_3166_2" =&gt; "SA",
+    "iso_3166_3" =&gt; "SAU",
+  ],
+  [
+    "id" =&gt; "686",
+    "name" =&gt; "Senegal",
+    "iso_3166_2" =&gt; "SN",
+    "iso_3166_3" =&gt; "SEN",
+  ],
+  [
+    "id" =&gt; "688",
+    "name" =&gt; "Serbia",
+    "iso_3166_2" =&gt; "RS",
+    "iso_3166_3" =&gt; "SRB",
+  ],
+  [
+    "id" =&gt; "690",
+    "name" =&gt; "Seychelles",
+    "iso_3166_2" =&gt; "SC",
+    "iso_3166_3" =&gt; "SYC",
+  ],
+  [
+    "id" =&gt; "694",
+    "name" =&gt; "Sierra Leone",
+    "iso_3166_2" =&gt; "SL",
+    "iso_3166_3" =&gt; "SLE",
+  ],
+  [
+    "id" =&gt; "702",
+    "name" =&gt; "Singapore",
+    "iso_3166_2" =&gt; "SG",
+    "iso_3166_3" =&gt; "SGP",
+  ],
+  [
+    "id" =&gt; "703",
+    "name" =&gt; "Slovakia",
+    "iso_3166_2" =&gt; "SK",
+    "iso_3166_3" =&gt; "SVK",
+  ],
+  [
+    "id" =&gt; "704",
+    "name" =&gt; "Viet Nam",
+    "iso_3166_2" =&gt; "VN",
+    "iso_3166_3" =&gt; "VNM",
+  ],
+  [
+    "id" =&gt; "705",
+    "name" =&gt; "Slovenia",
+    "iso_3166_2" =&gt; "SI",
+    "iso_3166_3" =&gt; "SVN",
+  ],
+  [
+    "id" =&gt; "706",
+    "name" =&gt; "Somalia",
+    "iso_3166_2" =&gt; "SO",
+    "iso_3166_3" =&gt; "SOM",
+  ],
+  [
+    "id" =&gt; "710",
+    "name" =&gt; "South Africa",
+    "iso_3166_2" =&gt; "ZA",
+    "iso_3166_3" =&gt; "ZAF",
+  ],
+  [
+    "id" =&gt; "716",
+    "name" =&gt; "Zimbabwe",
+    "iso_3166_2" =&gt; "ZW",
+    "iso_3166_3" =&gt; "ZWE",
+  ],
+  [
+    "id" =&gt; "724",
+    "name" =&gt; "Spain",
+    "iso_3166_2" =&gt; "ES",
+    "iso_3166_3" =&gt; "ESP",
+  ],
+  [
+    "id" =&gt; "728",
+    "name" =&gt; "South Sudan",
+    "iso_3166_2" =&gt; "SS",
+    "iso_3166_3" =&gt; "SSD",
+  ],
+  [
+    "id" =&gt; "729",
+    "name" =&gt; "Sudan",
+    "iso_3166_2" =&gt; "SD",
+    "iso_3166_3" =&gt; "SDN",
+  ],
+  [
+    "id" =&gt; "732",
+    "name" =&gt; "Western Sahara",
+    "iso_3166_2" =&gt; "EH",
+    "iso_3166_3" =&gt; "ESH",
+  ],
+  [
+    "id" =&gt; "740",
+    "name" =&gt; "Suriname",
+    "iso_3166_2" =&gt; "SR",
+    "iso_3166_3" =&gt; "SUR",
+  ],
+  [
+    "id" =&gt; "744",
+    "name" =&gt; "Svalbard and Jan Mayen",
+    "iso_3166_2" =&gt; "SJ",
+    "iso_3166_3" =&gt; "SJM",
+  ],
+  [
+    "id" =&gt; "748",
+    "name" =&gt; "Swaziland",
+    "iso_3166_2" =&gt; "SZ",
+    "iso_3166_3" =&gt; "SWZ",
+  ],
+  [
+    "id" =&gt; "752",
+    "name" =&gt; "Sweden",
+    "iso_3166_2" =&gt; "SE",
+    "iso_3166_3" =&gt; "SWE",
+  ],
+  [
+    "id" =&gt; "756",
+    "name" =&gt; "Switzerland",
+    "iso_3166_2" =&gt; "CH",
+    "iso_3166_3" =&gt; "CHE",
+  ],
+  [
+    "id" =&gt; "760",
+    "name" =&gt; "Syrian Arab Republic",
+    "iso_3166_2" =&gt; "SY",
+    "iso_3166_3" =&gt; "SYR",
+  ],
+  [
+    "id" =&gt; "762",
+    "name" =&gt; "Tajikistan",
+    "iso_3166_2" =&gt; "TJ",
+    "iso_3166_3" =&gt; "TJK",
+  ],
+  [
+    "id" =&gt; "764",
+    "name" =&gt; "Thailand",
+    "iso_3166_2" =&gt; "TH",
+    "iso_3166_3" =&gt; "THA",
+  ],
+  [
+    "id" =&gt; "768",
+    "name" =&gt; "Togo",
+    "iso_3166_2" =&gt; "TG",
+    "iso_3166_3" =&gt; "TGO",
+  ],
+  [
+    "id" =&gt; "772",
+    "name" =&gt; "Tokelau",
+    "iso_3166_2" =&gt; "TK",
+    "iso_3166_3" =&gt; "TKL",
+  ],
+  [
+    "id" =&gt; "776",
+    "name" =&gt; "Tonga",
+    "iso_3166_2" =&gt; "TO",
+    "iso_3166_3" =&gt; "TON",
+  ],
+  [
+    "id" =&gt; "780",
+    "name" =&gt; "Trinidad and Tobago",
+    "iso_3166_2" =&gt; "TT",
+    "iso_3166_3" =&gt; "TTO",
+  ],
+  [
+    "id" =&gt; "784",
+    "name" =&gt; "United Arab Emirates",
+    "iso_3166_2" =&gt; "AE",
+    "iso_3166_3" =&gt; "ARE",
+  ],
+  [
+    "id" =&gt; "788",
+    "name" =&gt; "Tunisia",
+    "iso_3166_2" =&gt; "TN",
+    "iso_3166_3" =&gt; "TUN",
+  ],
+  [
+    "id" =&gt; "792",
+    "name" =&gt; "Turkey",
+    "iso_3166_2" =&gt; "TR",
+    "iso_3166_3" =&gt; "TUR",
+  ],
+  [
+    "id" =&gt; "795",
+    "name" =&gt; "Turkmenistan",
+    "iso_3166_2" =&gt; "TM",
+    "iso_3166_3" =&gt; "TKM",
+  ],
+  [
+    "id" =&gt; "796",
+    "name" =&gt; "Turks and Caicos Islands",
+    "iso_3166_2" =&gt; "TC",
+    "iso_3166_3" =&gt; "TCA",
+  ],
+  [
+    "id" =&gt; "798",
+    "name" =&gt; "Tuvalu",
+    "iso_3166_2" =&gt; "TV",
+    "iso_3166_3" =&gt; "TUV",
+  ],
+  [
+    "id" =&gt; "800",
+    "name" =&gt; "Uganda",
+    "iso_3166_2" =&gt; "UG",
+    "iso_3166_3" =&gt; "UGA",
+  ],
+  [
+    "id" =&gt; "804",
+    "name" =&gt; "Ukraine",
+    "iso_3166_2" =&gt; "UA",
+    "iso_3166_3" =&gt; "UKR",
+  ],
+  [
+    "id" =&gt; "807",
+    "name" =&gt; "Macedonia, the former Yugoslav Republic of",
+    "iso_3166_2" =&gt; "MK",
+    "iso_3166_3" =&gt; "MKD",
+  ],
+  [
+    "id" =&gt; "818",
+    "name" =&gt; "Egypt",
+    "iso_3166_2" =&gt; "EG",
+    "iso_3166_3" =&gt; "EGY",
+  ],
+  [
+    "id" =&gt; "826",
+    "name" =&gt; "United Kingdom",
+    "iso_3166_2" =&gt; "GB",
+    "iso_3166_3" =&gt; "GBR",
+  ],
+  [
+    "id" =&gt; "831",
+    "name" =&gt; "Guernsey",
+    "iso_3166_2" =&gt; "GG",
+    "iso_3166_3" =&gt; "GGY",
+  ],
+  [
+    "id" =&gt; "832",
+    "name" =&gt; "Jersey",
+    "iso_3166_2" =&gt; "JE",
+    "iso_3166_3" =&gt; "JEY",
+  ],
+  [
+    "id" =&gt; "833",
+    "name" =&gt; "Isle of Man",
+    "iso_3166_2" =&gt; "IM",
+    "iso_3166_3" =&gt; "IMN",
+  ],
+  [
+    "id" =&gt; "834",
+    "name" =&gt; "Tanzania, United Republic of",
+    "iso_3166_2" =&gt; "TZ",
+    "iso_3166_3" =&gt; "TZA",
+  ],
+  [
+    "id" =&gt; "840",
+    "name" =&gt; "United States",
+    "iso_3166_2" =&gt; "US",
+    "iso_3166_3" =&gt; "USA",
+  ],
+  [
+    "id" =&gt; "850",
+    "name" =&gt; "Virgin Islands, U.S.",
+    "iso_3166_2" =&gt; "VI",
+    "iso_3166_3" =&gt; "VIR",
+  ],
+  [
+    "id" =&gt; "854",
+    "name" =&gt; "Burkina Faso",
+    "iso_3166_2" =&gt; "BF",
+    "iso_3166_3" =&gt; "BFA",
+  ],
+  [
+    "id" =&gt; "858",
+    "name" =&gt; "Uruguay",
+    "iso_3166_2" =&gt; "UY",
+    "iso_3166_3" =&gt; "URY",
+  ],
+  [
+    "id" =&gt; "860",
+    "name" =&gt; "Uzbekistan",
+    "iso_3166_2" =&gt; "UZ",
+    "iso_3166_3" =&gt; "UZB",
+  ],
+  [
+    "id" =&gt; "862",
+    "name" =&gt; "Venezuela, Bolivarian Republic of",
+    "iso_3166_2" =&gt; "VE",
+    "iso_3166_3" =&gt; "VEN",
+  ],
+  [
+    "id" =&gt; "876",
+    "name" =&gt; "Wallis and Futuna",
+    "iso_3166_2" =&gt; "WF",
+    "iso_3166_3" =&gt; "WLF",
+  ],
+  [
+    "id" =&gt; "882",
+    "name" =&gt; "Samoa",
+    "iso_3166_2" =&gt; "WS",
+    "iso_3166_3" =&gt; "WSM",
+  ],
+  [
+    "id" =&gt; "887",
+    "name" =&gt; "Yemen",
+    "iso_3166_2" =&gt; "YE",
+    "iso_3166_3" =&gt; "YEM",
+  ],
+  [
+    "id" =&gt; "894",
+    "name" =&gt; "Zambia",
+    "iso_3166_2" =&gt; "ZM",
+    "iso_3166_3" =&gt; "ZMB",
+  ],
+]
+</code></pre>
+
+            <a href="https://github.com/invoiceninja/invoiceninja.github.io/blob/v5-rework/source/docs/statics.md"
+               class="pt-4 border-t inline-flex items-center w-full block">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     class="feather feather-github">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                <span class="ml-2">Want to contribute? Edit this page on GitHub!</span>
+            </a>
+        </div> <!-- End of main content -->
+
+        <div class="hidden md:block col-span-2 p-4">
+            <div class="fixed overflow-y-auto pr-4 h-full pl-4 pb-32 text-sm" id="toc-container">
+                <!-- Placeholder for table of contents -->
+                <span class="text-sm uppercase block mb-3 text-ninja-blue">On this page</span>
+            </div>
+        </div>
+    </div>
+        <script src="/assets/build/js/main.js?id=5d8f1025c2be8c2903a2ea7ba7775489"></script>
+
+    <script>
+        document.getElementById('mobile-menu-toggle').addEventListener('click', () => {
+            let mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenu.classList.contains('hidden')) {
+                return mobileMenu.classList.remove('hidden');
+            }
+
+            return mobileMenu.classList.add('hidden');
+        });
+    </script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script type="text/javascript">
+        docsearch({
+            apiKey: '4816218e8381d5a17beacd84823e9ea3',
+            indexName: 'invoiceninja',
+            inputSelector: '#topSearchBox',
+            debug: false
+        });
+    </script>
+        <script type="text/javascript">
+        docsearch({
+            apiKey: '4816218e8381d5a17beacd84823e9ea3',
+            indexName: 'invoiceninja',
+            inputSelector: '#indexSearchBox',
+            debug: false
+        });
+    </script>
+
+<style>
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video_container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+</style>
+</body>
+
+</html>

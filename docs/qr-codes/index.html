@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Free Source Available Invoicing, Expenses &amp; Time-Tracking | Invoice Ninja</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="referrer" content="always">
+    <link rel="canonical" href="https://invoiceninja.github.io/docs/qr-codes">
+    <meta name="description" content="The leading free source available online invoicing app for freelancers &amp; businesses. Invoice, accept payments, track expenses, &amp; time-tasks">
+
+    <link rel="stylesheet" href="/assets/build/css/main.css?id=6145b5c4aae1ccb9d2f96ae70f781723">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/agate.min.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
+
+    <script>hljs.highlightAll();</script>
+</head>
+
+<nav class="py-4 sticky top-0 z-40 lg:z-50 w-full mx-auto bg-white border-b">
+    <div id="navigation-content" class="flex items-center justify-between px-4 md:px-0 md:mx-4 lg:px-4 xl:mx-auto max-w-8xl">
+        <a href="/" id="left-side-logo">
+            <img class="h-10"
+                 src="/assets/images/logo-rounded.png"
+                 alt="Invoice Ninja logo"/>
+        </a>
+        <section id="right-side-items" class="text-sm">
+            <div class="hidden md:hidden lg:block md:space-x-5">
+                <input type="text" placeholder="Quick search ..." id="topSearchBox" data-lpignore="true"
+                       class="pb-1 border-b hover:border-ninja-blue focus:border-ninja-blue focus:outline-none">
+                <a href="/docs/getting-started" class="py-2 border-b border-transparent hover:border-ninja-blue">User Guide</a>
+                <a href="https://app.swaggerhub.com/apis/invoiceninja/invoiceninja" target="_blank"
+                   class="py-2 border-b border-transparent hover:border-ninja-blue">API Documentation</a>
+                <a target="_blank" href="https://invoicing.co" class="px-5 py-2 border rounded-full hover:border-ninja-blue">Go
+                    to app</a>
+            </div>
+            <div class="flex flex-col lg:hidden">
+                <button id="mobile-menu-toggle" class="focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="feather feather-menu">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </section>
+    </div>
+    <div id="mobile-menu" class="hidden px-4 pt-4 flex flex-col">
+        <a href="/docs/getting-started"
+           class="py-2 border-b border-transparent hover:border-ninja-blue">User Guide</a>
+        <a href="https://app.swaggerhub.com/apis/invoiceninja/invoiceninja" target="_blank"
+           class="py-2 border-b border-transparent hover:border-ninja-blue">API Documentation</a>
+        <a href="https://invoicing.co" target="_blank"
+           class="py-2 border-b border-transparent hover:border-ninja-blue">Go to app</a>
+    </div>
+</nav>
+<body class="font-sans antialiased text-gray-900 bg-white ">
+        <div class="hidden top-0 absolute z-40 bg-white w-full h-screen" id="mobile-menu-overlay">
+       <div class="p-6 flex items-top justify-between">
+           <div>
+                                  <div clasS="mb-8">
+                       <a class="block hover:text-ninja-blue font-semibold uppercase "
+                          href="/docs/getting-started">User guide</a>
+
+                       <div class="mt-2">
+                                                          <a class="block hover:text-ninja-blue py-1 "
+                                  href="/docs/user-guide">Getting Started</a>
+                                                          <a class="block hover:text-ninja-blue py-1 "
+                                  href="/docs/banking">Banking</a>
+                                                          <a class="block hover:text-ninja-blue py-1 "
+                                  href="/docs/clients">Clients</a>
+                                                          <a class="block hover:text-ninja-blue py-1 "
+                                  href="/docs/credits">Credits</a>
+                                                          <a class="block hover:text-ninja-blue py-1 "
+                                  href="/docs/expenses">Expenses</a>
+                                                          <a class="block hover:text-ninja-blue py-1 "
+                                  href="/docs/invoices">Invoices</a>
+                                                          <a class="block hover:text-ninja-blue py-1 "
+                                  href="/docs/payments">Payments</a>
+                                                          <a class="block hover:text-ninja-blue py-1 "
+                                  href="/docs/products">Products</a>
+                                                          <a class="block hover:text-ninja-blue py-1 "
+                                  href="/docs/projects">Projects</a>
+                                                          <a class="block hover:text-ninja-blue py-1 "
+                                  href="/docs/purchase_orders">Purchase Orders</a>
+                                                          <a class="block hover:text-ninja-blue py-1 "
+                                  href="/docs/recurring-expenses">Recurring Expenses</a>
+                                                          <a class="block hover:text-ninja-blue py-1 "
+                                  href="/docs/recurring-invoices">Recurring Invoices</a>
+                                                          <a class="block hover:text-ninja-blue py-1 "
+                                  href="/docs/reports">Reports</a>
+                                                          <a class="block hover:text-ninja-blue py-1 "
+                                  href="/docs/quotes">Quotes</a>
+                                                          <a class="block hover:text-ninja-blue py-1 "
+                                  href="/docs/subscriptions">Subscriptions</a>
+                                                          <a class="block hover:text-ninja-blue py-1 "
+                                  href="/docs/tasks">Tasks</a>
+                                                          <a class="block hover:text-ninja-blue py-1 "
+                                  href="/docs/transactions">Transactions</a>
+                                                          <a class="block hover:text-ninja-blue py-1 "
+                                  href="/docs/vendors">Vendors</a>
+                                                          <a class="block hover:text-ninja-blue py-1 "
+                                  href="/docs/basic-settings">Basic Settings</a>
+                                                          <a class="block hover:text-ninja-blue py-1 "
+                                  href="/docs/advanced-settings">Advanced Settings</a>
+                                                  </div>
+                   </div>
+                                  <div clasS="mb-8">
+                       <a class="block hover:text-ninja-blue font-semibold uppercase "
+                          href="#">Advanced Topics</a>
+
+                       <div class="mt-2">
+                                                          <a class="block hover:text-ninja-blue py-1 "
+                                  href="/docs/custom-fields">PDF Customization</a>
+                                                          <a class="block hover:text-ninja-blue py-1 "
+                                  href="/docs/gateways">Payment Gateways</a>
+                                                          <a class="block hover:text-ninja-blue py-1 text-ninja-blue"
+                                  href="/docs/qr-codes">QR Codes</a>
+                                                          <a class="block hover:text-ninja-blue py-1 "
+                                  href="/docs/import-and-export">Import|Export</a>
+                                                  </div>
+                   </div>
+                                  <div clasS="mb-8">
+                       <a class="block hover:text-ninja-blue font-semibold uppercase "
+                          href="/docs/hosted-quickstart">Hosted</a>
+
+                       <div class="mt-2">
+                                                          <a class="block hover:text-ninja-blue py-1 "
+                                  href="/docs/hosted-quickstart">Quick Start</a>
+                                                          <a class="block hover:text-ninja-blue py-1 "
+                                  href="/docs/hosted-activate">Activate</a>
+                                                          <a class="block hover:text-ninja-blue py-1 "
+                                  href="/docs/hosted-custom-domain">Custom Domain</a>
+                                                          <a class="block hover:text-ninja-blue py-1 "
+                                  href="/docs/hosted-migration">Hosted Migration</a>
+                                                          <a class="block hover:text-ninja-blue py-1 "
+                                  href="/docs/hosted-stripe">Stripe Integration</a>
+                                                  </div>
+                   </div>
+                          </div>
+           <div>
+                <button onclick="document.getElementById('mobile-menu-overlay').classList.add('hidden');">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+           </div>
+       </div>
+    </div>
+
+    <div class="max-w-12xl grid grid-cols-12 py-2 px-2 lg:mx-auto">
+        <div class="hidden space-y-6 md:block lg:col-span-2">
+            <div class="hidden lg:block fixed mt-2 h-full overflow-y-auto pb-32 pr-16 pl-4">
+                                    <div clasS="mb-8">
+                        <a class="block hover:text-ninja-blue font-semibold uppercase "
+                           href="/docs/getting-started">User guide</a>
+
+                        <div class="mt-2">
+                                                            <a class="block hover:text-ninja-blue py-1 "
+                                   href="/docs/user-guide">Getting Started</a>
+                                                            <a class="block hover:text-ninja-blue py-1 "
+                                   href="/docs/banking">Banking</a>
+                                                            <a class="block hover:text-ninja-blue py-1 "
+                                   href="/docs/clients">Clients</a>
+                                                            <a class="block hover:text-ninja-blue py-1 "
+                                   href="/docs/credits">Credits</a>
+                                                            <a class="block hover:text-ninja-blue py-1 "
+                                   href="/docs/expenses">Expenses</a>
+                                                            <a class="block hover:text-ninja-blue py-1 "
+                                   href="/docs/invoices">Invoices</a>
+                                                            <a class="block hover:text-ninja-blue py-1 "
+                                   href="/docs/payments">Payments</a>
+                                                            <a class="block hover:text-ninja-blue py-1 "
+                                   href="/docs/products">Products</a>
+                                                            <a class="block hover:text-ninja-blue py-1 "
+                                   href="/docs/projects">Projects</a>
+                                                            <a class="block hover:text-ninja-blue py-1 "
+                                   href="/docs/purchase_orders">Purchase Orders</a>
+                                                            <a class="block hover:text-ninja-blue py-1 "
+                                   href="/docs/recurring-expenses">Recurring Expenses</a>
+                                                            <a class="block hover:text-ninja-blue py-1 "
+                                   href="/docs/recurring-invoices">Recurring Invoices</a>
+                                                            <a class="block hover:text-ninja-blue py-1 "
+                                   href="/docs/reports">Reports</a>
+                                                            <a class="block hover:text-ninja-blue py-1 "
+                                   href="/docs/quotes">Quotes</a>
+                                                            <a class="block hover:text-ninja-blue py-1 "
+                                   href="/docs/subscriptions">Subscriptions</a>
+                                                            <a class="block hover:text-ninja-blue py-1 "
+                                   href="/docs/tasks">Tasks</a>
+                                                            <a class="block hover:text-ninja-blue py-1 "
+                                   href="/docs/transactions">Transactions</a>
+                                                            <a class="block hover:text-ninja-blue py-1 "
+                                   href="/docs/vendors">Vendors</a>
+                                                            <a class="block hover:text-ninja-blue py-1 "
+                                   href="/docs/basic-settings">Basic Settings</a>
+                                                            <a class="block hover:text-ninja-blue py-1 "
+                                   href="/docs/advanced-settings">Advanced Settings</a>
+                                                    </div>
+                    </div>
+                                    <div clasS="mb-8">
+                        <a class="block hover:text-ninja-blue font-semibold uppercase "
+                           href="#">Advanced Topics</a>
+
+                        <div class="mt-2">
+                                                            <a class="block hover:text-ninja-blue py-1 "
+                                   href="/docs/custom-fields">PDF Customization</a>
+                                                            <a class="block hover:text-ninja-blue py-1 "
+                                   href="/docs/gateways">Payment Gateways</a>
+                                                            <a class="block hover:text-ninja-blue py-1 text-ninja-blue"
+                                   href="/docs/qr-codes">QR Codes</a>
+                                                            <a class="block hover:text-ninja-blue py-1 "
+                                   href="/docs/import-and-export">Import|Export</a>
+                                                    </div>
+                    </div>
+                                    <div clasS="mb-8">
+                        <a class="block hover:text-ninja-blue font-semibold uppercase "
+                           href="/docs/hosted-quickstart">Hosted</a>
+
+                        <div class="mt-2">
+                                                            <a class="block hover:text-ninja-blue py-1 "
+                                   href="/docs/hosted-quickstart">Quick Start</a>
+                                                            <a class="block hover:text-ninja-blue py-1 "
+                                   href="/docs/hosted-activate">Activate</a>
+                                                            <a class="block hover:text-ninja-blue py-1 "
+                                   href="/docs/hosted-custom-domain">Custom Domain</a>
+                                                            <a class="block hover:text-ninja-blue py-1 "
+                                   href="/docs/hosted-migration">Hosted Migration</a>
+                                                            <a class="block hover:text-ninja-blue py-1 "
+                                   href="/docs/hosted-stripe">Stripe Integration</a>
+                                                    </div>
+                    </div>
+                            </div>
+        </div> <!-- End of sidebar -->
+
+        <div class="col-span-12 md:col-span-8 prose mx-auto max-w-max" id="page-content">
+            <div class="block lg:hidden flex flex-col mb-4 lg:mb-0">
+                <button onclick="document.getElementById('mobile-menu-overlay').classList.remove('hidden');">&#8592; Documentation</button>
+            </div>
+
+            <h1>QR Codes</h1>
+
+<p>We currently offer three options for QR codes in Invoice Ninja: Swiss QR, SEPA ERC and generic Payment link QR codes which will take the end user to the Invoice Ninja Client portal for payment.</p>
+
+<h2>Swiss QR Codes</h2>
+
+<p>For Swiss users, you are able to automatically inject Swiss Compatible payment QR codes directly into the invoice design.</p>
+
+<p>There are three types of QR-Rechnungen.</p>
+
+<ol>
+<li><strong>QR-IBAN with QR-Reference</strong>.</li>
+</ol>
+
+<p>This is a special IBAN, different from you normal IBAN. Easiest way is to ask your bank for the QR-IBAN, but you can also calculate it yourself. 
+The QR-Reference is a 26 digit number follow by one checksum digit. The checksum has to be modulo 10, recursive. Additionally you can add 140 symbols of text.</p>
+
+<h3>How to calculate your QR-IBAN:</h3>
+
+<p>For example, the normal IID of Raiffeisen is 80808.</p>
+
+<p>Because of that, a Raiffeisen IBAN could look like this  CH21 <strong>8080 8</strong>001 2345 6789 0</p>
+
+<p>Lookup the QR-IID of your bank (something between 30000 and 31999) and replace the IID with the QR-IID. The Raiffeisen QR-IID is 30808. If we replace the previous IBAN with this, we get:  CH21 <strong>3080 8</strong>001 2345 6789 0. This is the QR-IBAN with wrong checksum therefore we have to calculate it.</p>
+
+<p>We start with the original checksum (CH<strong>21</strong> 3080 8001 2345 6789 0). The QR-IBAN should be one for modulo 97. We have to move the first 4 symbols to the end (3080 8001 2345 6789 0 CH21). We replace the checksum 21 with two XX, because we don't know this yet (38080 8001 2345 6789 0 CHXX). After that we replace CH with digits. It is alphabetical and starts with 10. So A=10, B=11 and C=13. Because of that, CH is 1217. This gives us 3080 8001 2345 6789 0 1217XX. We now have to find two numbers that give us the modulo 97 = 1.</p>
+
+<p>We start by using 00 for XX. 3080 8001 2345 6789 0 121700 modulo 97 = 32. That is to low. 97-32+1= 66.  3080 8001 2345 6789 0 121766 modulo 97 = 1. Now we got it! We move them back to the front (121766 3080 8001 2345 6789 0) and replace 1217 with the country code (CH66 3080 8001 2345 6789 0). This is our QR-IBAN.</p>
+
+<ol start="2">
+<li><strong>QR-Rechnung with IBAN and without reference</strong></li>
+</ol>
+
+<p>This is your normal IBAN. You can't use a reference! You are only allowed to use 140 symbols of text.</p>
+
+<ol start="3">
+<li><strong>QR-Rechnung with IBAN and Creditor Reference</strong></li>
+</ol>
+
+<p>Follows the ISO-11649 norm. Works like a QR-Reference but uses ISO-11649 which makes it usable international. Unlike the provious two QR codes, this also works outside of Switzerland. You have to use the normal IBAN, not the QR IBAN.</p>
+
+<p><img src="/assets/images/pdf_customization/swiss_qrcode1.png" alt="alt text" title="Swiss QR Codes" /></p>
+
+<p>You can configure this under Settigns > Company Details in the Details page.</p>
+
+<p><img src="/assets/images/pdf_customization/swiss_qrcode3.png" alt="alt text" title="Swiss QR Codes" /></p>
+
+<p>You'll then need to customize your design to include the QR code on your PDFs. To do this create a new design in Settings > Inovice Design > Customize</p>
+
+<p>In the body tab, at the bottom add</p>
+
+<pre><code>&lt;div&gt;
+$swiss_qr
+&lt;/div&gt;
+</code></pre>
+
+<p>After you have saved the design, you'll want to make this your new default design.</p>
+
+<p><img src="/assets/images/pdf_customization/swiss_qrcode2.png" alt="alt text" title="Swiss QR Codes" /></p>
+
+<p>If your QR codes are not appearing then there would be a configuration issue that needs to be addressed. The most common reasons the QR code does not appear on the PDF is due to missing company details. Your full address is required along with the clients full details.</p>
+
+<h2>SEPA ERC QR Codes</h2>
+
+<p>To enable SEPA QR codes you'll need to follow a couple of steps to ensure there is the correct data.</p>
+
+<p>SEPA QR codes require at the very least a IBAN, for payments outside of EEA you will also need the BIC. These two fields are harvested from the Custom Company Fields section of Invoice Ninja. Please note that IBAN must be the first custom field and BIC the second custom field. To configure these navigate to</p>
+
+<pre><code class="language-bash">Settings &gt; Custom Fields &gt; Company
+</code></pre>
+
+<p><img src="/assets/images/user_guide/iban_bic.png" alt="alt text" title="IBAN and BIC configuration" /></p>
+
+<p>Once saved, then navigate to</p>
+
+<pre><code class="language-bash">Settings &gt; Company Details
+</code></pre>
+
+<p>And enter in the values for your company</p>
+
+<p><img src="/assets/images/user_guide/iban_bic_2.png" alt="alt text" title="IBAN and BIC configuration" /></p>
+
+<p>In your custom design, you'll then want to insert the variable that allows the QR code to be injected, for example.</p>
+
+<pre><code>&lt;div&gt;
+$sepa_qr_code
+&lt;/div&gt;
+</code></pre>
+
+<h2>Generic Payment link QR Codes</h2>
+
+<p>Generic payment QR codes can easily be applied to your Invoice PDF using the following block in your custom Design</p>
+
+<pre><code>&lt;div&gt;
+$payment_qrcode
+&lt;/div&gt;
+</code></pre>
+
+<p> <div class="flex justify-end">
+    <a class="text-blue-500 flex items-center" href="/docs/import-and-export">
+        <span>Import | Export</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="p-0 mt-1 h-4" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="13 17 18 12 13 7"></polyline>
+            <polyline points="6 17 11 12 6 7"></polyline>
+        </svg>
+    </a>
+</div> </p>
+
+            <a href="https://github.com/invoiceninja/invoiceninja.github.io/blob/v5-rework/source/docs/qr-codes.md"
+               class="pt-4 border-t inline-flex items-center w-full block">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     class="feather feather-github">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                <span class="ml-2">Want to contribute? Edit this page on GitHub!</span>
+            </a>
+        </div> <!-- End of main content -->
+
+        <div class="hidden md:block col-span-2 p-4">
+            <div class="fixed overflow-y-auto pr-4 h-full pl-4 pb-32 text-sm" id="toc-container">
+                <!-- Placeholder for table of contents -->
+                <span class="text-sm uppercase block mb-3 text-ninja-blue">On this page</span>
+            </div>
+        </div>
+    </div>
+        <script src="/assets/build/js/main.js?id=5d8f1025c2be8c2903a2ea7ba7775489"></script>
+
+    <script>
+        document.getElementById('mobile-menu-toggle').addEventListener('click', () => {
+            let mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenu.classList.contains('hidden')) {
+                return mobileMenu.classList.remove('hidden');
+            }
+
+            return mobileMenu.classList.add('hidden');
+        });
+    </script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script type="text/javascript">
+        docsearch({
+            apiKey: '4816218e8381d5a17beacd84823e9ea3',
+            indexName: 'invoiceninja',
+            inputSelector: '#topSearchBox',
+            debug: false
+        });
+    </script>
+        <script type="text/javascript">
+        docsearch({
+            apiKey: '4816218e8381d5a17beacd84823e9ea3',
+            indexName: 'invoiceninja',
+            inputSelector: '#indexSearchBox',
+            debug: false
+        });
+    </script>
+
+<style>
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video_container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+</style>
+</body>
+
+</html>
